@@ -35,7 +35,7 @@ const CONFIG = {
 
   /* --- ΕΠΙΚΟΙΝΩΝΙΑ --- */
   email:   "ΥΠΟ ΑΝΑΚΟΙΝΩΣΗ",                 // ← π.χ. "synedrio@upatras.gr"
-  website: "gmalapetsa2.wixsite.com/mysite-1",
+  website: "",   // ← βάλτε το GitHub Pages URL μόλις είναι έτοιμο (π.χ. "https://username.github.io/synedrio-2026")
 
   /* --- SOCIAL MEDIA (αφήστε "" αν δεν έχετε) --- */
   facebook:  "",   // ← π.χ. "https://facebook.com/synedrio2026"
@@ -810,7 +810,7 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
     <h2 class="section-title">Επικοινωνήστε μαζί μας</h2>
     <div class="contact-grid">
       <div class="contact-card"><div class="cc-icon">✉️</div><div class="cc-label">Email Συνεδρίου</div><div class="cc-val" id="contact-email"></div></div>
-      <div class="contact-card"><div class="cc-icon">🌐</div><div class="cc-label">Ιστότοπος</div><div class="cc-val"><a id="contact-website" href="#" target="_blank" rel="noopener"></a></div></div>
+      <div class="contact-card" id="contact-website-card"><div class="cc-icon">🌐</div><div class="cc-label">Ιστότοπος</div><div class="cc-val"><a id="contact-website" href="#" target="_blank" rel="noopener"></a></div></div>
       <div class="contact-card"><div class="cc-icon">🏛️</div><div class="cc-label">Φορέας</div><div class="cc-val" id="contact-org"></div></div>
     </div>
 
@@ -912,8 +912,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ? `<a href="mailto:${CONFIG.email}">${CONFIG.email}</a>`
     : CONFIG.email;
   const wsEl = document.getElementById('contact-website');
-  wsEl.href = CONFIG.website.startsWith('http') ? CONFIG.website : 'https://'+CONFIG.website;
-  wsEl.textContent = CONFIG.website;
+  const wsCard = document.getElementById('contact-website-card');
+  if(CONFIG.website){
+    wsEl.href = CONFIG.website.startsWith('http') ? CONFIG.website : 'https://'+CONFIG.website;
+    wsEl.textContent = CONFIG.website;
+  } else {
+    if(wsCard) wsCard.style.display = 'none';
+  }
   document.getElementById('contact-org').textContent =
     CONFIG.diorganotes1 + ' & ' + CONFIG.diorganotes2;
 
