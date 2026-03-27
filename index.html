@@ -17,7 +17,7 @@ const CONFIG = {
   titlos:       "Η Πρωτοβάθμια Εκπαίδευση στην Εποχή της Τεχνητής Νοημοσύνης",
   ypotitlos:    "Από την ψηφιακή ισότητα στη συμπεριληπτική καινοτομία",
   imeres:       "18–19 Σεπτεμβρίου 2026",
-  xoros:        "Συνεδριακό Κέντρο Πανεπιστημίου Πατρών, Ρίο Πάτρας",
+  xoros:        "Συνεδριακό Κέντρο Πανεπιστημίου Πατρών, Πάτρα",
   diorganotes1: "ΤΕΕΑΠΗ, Πανεπιστήμιο Πατρών",
   diorganotes2: "Διεύθυνση Πρωτοβάθμιας Εκπαίδευσης Αχαΐας",
 
@@ -34,8 +34,8 @@ const CONFIG = {
   pdf_1h_anakoinosi: "1h_Anakoinosi_2026.pdf",   // ← όνομα αρχείου PDF (πρέπει να ανεβάσετε και αυτό στο GitHub)
 
   /* --- ΕΠΙΚΟΙΝΩΝΙΑ --- */
-  email:   "ΥΠΟ ΑΝΑΚΟΙΝΩΣΗ",                 // ← π.χ. "synedrio@upatras.gr"
-  website: "",   // ← βάλτε το GitHub Pages URL μόλις είναι έτοιμο (π.χ. "https://username.github.io/synedrio-2026")
+  email:   "info@primedu-ai2026.gr",                 // ← π.χ. "synedrio@upatras.gr"
+  website: "primedu-ai2026.gr",   // ← ενημερώστε με το πλήρες URL όταν είναι ενεργό
 
   /* --- SOCIAL MEDIA (αφήστε "" αν δεν έχετε) --- */
   facebook:  "",   // ← π.χ. "https://facebook.com/synedrio2026"
@@ -282,6 +282,13 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
 .ann-btn-pdf:hover{background:var(--pp);border-color:var(--p)}
 .ann-btn-pdf.disabled{opacity:.35;pointer-events:none;cursor:default}
 
+
+/* LANG SWITCHER */
+.lang-switcher{display:flex;gap:4px;margin-left:16px}
+.lang-btn{background:none;border:1px solid rgba(29,158,117,.35);color:var(--gl);font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:4px 10px;border-radius:4px;cursor:pointer;transition:all .2s}
+.lang-btn.active{background:var(--g);border-color:var(--g);color:#fff}
+.lang-btn:hover:not(.active){background:rgba(29,158,117,.15)}
+[data-en]{display:none}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -356,6 +363,10 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
     <li><a href="#contact">Επικοινωνία</a></li>
   </ul>
   <a href="#registration" class="nav-cta">Δήλωση Συμμετοχής</a>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('el')" id="btn-el">ΕΛ</button>
+    <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+  </div>
   <button class="burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
@@ -470,12 +481,12 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
         </g>
       </svg>
     </div>
-    <span class="hero-badge">Πρώτη Ανακοίνωση · Call for Papers 2026</span>
+    
     <h1 class="hero-title" id="hero-title"></h1>
     <p class="hero-sub" id="hero-sub"></p>
     <div class="hero-meta">
       <div class="hero-meta-item"><div class="meta-label">Ημερομηνία</div><div class="meta-value" id="meta-imeres"></div></div>
-      <div class="hero-meta-item"><div class="meta-label">Χώρος</div><div class="meta-value">Παν/μιο Πατρών, Ρίο</div></div>
+      <div class="hero-meta-item"><div class="meta-label">Χώρος</div><div class="meta-value">Πανεπιστήμιο Πατρών</div></div>
       <div class="hero-meta-item"><div class="meta-label">Υποβολή έως</div><div class="meta-value" id="meta-deadline"></div></div>
       <div class="hero-meta-item"><div class="meta-label">Εγγραφή</div><div class="meta-value" id="meta-kostos"></div></div>
     </div>
@@ -509,10 +520,12 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
         <h2 class="section-title">Για το Συνέδριο</h2>
         <p class="section-body">Το Συνέδριο αναδεικνύει τις προκλήσεις και ευκαιρίες από την ενσωμάτωση της ΤΝ στην πρωτοβάθμια εκπαίδευση, με έμφαση στη συμπερίληψη, τη ψηφιακή ισότητα και την επαγγελματική ανάπτυξη εκπαιδευτικών.</p>
         <div class="about-goals">
-          <div class="goal-item"><div class="goal-num">i</div><div class="goal-text"><strong>Κατάργηση παιδαγωγικού χάσματος</strong>Φυσική &amp; διαδικτυακή μάθηση σε ενιαία εμπειρία.</div></div>
-          <div class="goal-item"><div class="goal-num">ii</div><div class="goal-text"><strong>Ενσωμάτωση αξιολόγησης στη διδασκαλία</strong>Συνεχής ανατροφοδότηση στη μαθησιακή διαδικασία.</div></div>
-          <div class="goal-item"><div class="goal-num">iii</div><div class="goal-text"><strong>Υπέρβαση ορίων παραδοσιακής τάξης</strong>Ευέλικτες μορφές σε κοινότητες πολλαπλής συνεργασίας.</div></div>
-          <div class="goal-item"><div class="goal-num">iv</div><div class="goal-text"><strong>Στόχος επιτυχίας όλων των μαθητών/τριών</strong>Εξατομικευμένος ρυθμός και συνεχής υποστήριξη.</div></div>
+          <div class="goal-item"><div class="goal-num">i</div><div class="goal-text"><strong>Η εξάλειψη του παιδαγωγικού χάσματος</strong>Η μάθηση δεν διαφοροποιείται παιδαγωγικά ανάλογα με το αν γίνεται στην τάξη ή online. Οι ψηφιακές υποδομές επιτρέπουν ενεργητική συμμετοχή, συνεργασία και συνεχή ανατροφοδότηση, μετατρέποντας τη μάθηση σε μια ενιαία εμπειρία ανεξάρτητα από χρόνο και χώρο.</div></div>
+          <div class="goal-item"><div class="goal-num">ii</div><div class="goal-text"><strong>Η ενσωμάτωση της αξιολόγησης στη διδασκαλία</strong>Η αξιολόγηση ενσωματώνεται δημιουργικά στη μαθησιακή διαδικασία μέσα από συνεχή ανατροφοδότηση, αναστοχασμό, μεταγνωστικές δεξιότητες και συνεργατικές δραστηριότητες.</div></div>
+          <div class="goal-item"><div class="goal-num">iii</div><div class="goal-text"><strong>Η υπέρβαση των ορίων της παραδοσιακής τάξης</strong>Η αξιοποίηση ψηφιακών εργαλείων επιτρέπει ευέλικτες μορφές μάθησης σε ατομικό, ομαδικό ή κοινοτικό επίπεδο, όπου η γνώση παράγεται και μοιράζεται πέρα από τα παραδοσιακά όρια.</div></div>
+          <div class="goal-item"><div class="goal-num">iv</div><div class="goal-text"><strong>Η προσωποποιημένη μάθηση στην κοινότητα</strong>Μέσα από ψηφιακές κοινότητες, οι μαθητές/τριες συνεργάζονται, ανταλλάσσουν ανατροφοδότηση και συνδιαμορφώνουν τη γνώση, συνδυάζοντας προσωπική πρόοδο με συλλογική μάθηση.</div></div>
+          <div class="goal-item"><div class="goal-num">v</div><div class="goal-text"><strong>Ο στόχος της επιτυχημένης ένταξης όλων των μαθητών</strong>Οι σύγχρονες διδακτικές κατευθύνσεις υποστηρίζουν την ιδέα ότι κάθε μαθητής/τρια μπορεί να φτάσει στην κατάκτηση της γνώσης, υλοποιώντας την αρχή της καθολικής επιτυχίας.</div></div>
+          <div class="goal-item"><div class="goal-num">vi</div><div class="goal-text"><strong>Η επαγγελματική ανάπτυξη εκπαιδευτικών με ψηφιακά εργαλεία</strong>Μέσω της ΤΝ επιδιώκεται η ενδυνάμωση των εκπαιδευτικών στην υιοθέτηση σύγχρονων μεθοδολογιών που βελτιώνουν άμεσα την ποιότητα της μάθησης.</div></div>
         </div>
       </div>
       <div>
@@ -539,18 +552,18 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
         <div class="green-bar"></div>
         <h2 class="section-title">Πεδία Ενδιαφέροντος &amp; Υποβολής</h2>
       </div>
-      <p class="section-body">Καλούνται εργασίες σε μία από τις παρακάτω 9 θεματικές. Κάθε συμμετέχων μπορεί να υποβάλει έως <strong>δύο (2) περιλήψεις</strong>.</p>
+      <p class="section-body">Οι συγγραφείς καλούνται να υποβάλουν περιλήψεις που να συνδέονται άμεσα με το κεντρικό θέμα του Συνεδρίου και με τις θεματικές περιοχές. Κάθε συμμετέχων/ούσα μπορεί να υποβάλει έως <strong>δύο (2) περιλήψεις</strong>. Οι περιλήψεις πρέπει να είναι πρωτότυπες και να πληρούν τις αρχές της ακαδημαϊκής δεοντολογίας, της επιστημονικής δομής και της μεθοδολογικής αρτιότητας.</p>
     </div>
     <div class="themes-grid reveal">
-      <div class="theme-card"><div class="theme-num-badge">01</div><h3 class="theme-title">Ψηφιακές Παιδαγωγικές &amp; Πρόγραμμα Σπουδών</h3><p class="theme-body">Ψηφιακός γραμματισμός, ΑΙ, διαφοροποίηση, ανάπτυξη Π.Σ., διδασκαλία &amp; αξιολόγηση.</p></div>
-      <div class="theme-card"><div class="theme-num-badge">02</div><h3 class="theme-title">Νέοι Γραμματισμοί &amp; Βιόκοσμοι Μαθητών/τριών</h3><p class="theme-body">Αξιοποίηση διαφορετικότητας, STEM, πολυγραμματισμοί, πολυγλωσσία.</p></div>
-      <div class="theme-card"><div class="theme-num-badge">03</div><h3 class="theme-title">Νέες Δεξιότητες &amp; Ψηφιακή Πολιτειότητα</h3><p class="theme-body">Ασφαλές, δίκαιο και συνεργατικό ψηφιακό εκπαιδευτικό περιβάλλον.</p></div>
-      <div class="theme-card"><div class="theme-num-badge">04</div><h3 class="theme-title">Σχολικές Κοινότητες &amp; Διαπολιτισμική Ηγεσία</h3><p class="theme-body">Διοικητική λειτουργία, ΤΝ, δημοκρατική συνύπαρξη, διαπολιτισμικός διάλογος.</p></div>
-      <div class="theme-card"><div class="theme-num-badge">05</div><h3 class="theme-title">Σχολική Διαμεσολάβηση &amp; Ενδυνάμωση Κοινότητας</h3><p class="theme-body">Πρακτικές διαμεσολάβησης, ΤΝ για πρόληψη/διαχείριση συγκρούσεων.</p></div>
-      <div class="theme-card"><div class="theme-num-badge">06</div><h3 class="theme-title">Επαγγελματική Μάθηση &amp; Ενδοσχολική Επιμόρφωση</h3><p class="theme-body">Ρόλος εκπαιδευτικού στο ψηφιακό περιβάλλον, σύγχρονες μορφές ανάπτυξης.</p></div>
-      <div class="theme-card"><div class="theme-num-badge">07</div><h3 class="theme-title">Κώδικας Δεοντολογίας &amp; Ζητήματα Ασφάλειας</h3><p class="theme-body">Δεοντολογία, υπευθυνότητα, ζητήματα ασφάλειας, bias/fakes στην ΤΝ.</p></div>
-      <div class="theme-card"><div class="theme-num-badge">08</div><h3 class="theme-title">Τέχνες στην Εκπαίδευση &amp; Τεχνητή Νοημοσύνη</h3><p class="theme-body">Δημιουργικότητα, κριτική σκέψη &amp; πολιτισμική έκφραση μέσα από ΤΝ εργαλεία.</p></div>
-      <div class="theme-card"><div class="theme-num-badge">09</div><h3 class="theme-title">Ειδική Αγωγή &amp; Συμπεριληπτική Εκπαίδευση</h3><p class="theme-body">ΤΝ για διαφοροποιημένη διδασκαλία, ανίχνευση δυσκολιών, συμπεριληπτικές πρακτικές.</p></div>
+      <div class="theme-card"><div class="theme-num-badge">01</div><h3 class="theme-title">Ψηφιακές Παιδαγωγικές και Πρόγραμμα Σπουδών</h3><p class="theme-body">Μελέτη του τρόπου με τον οποίο οι ψηφιακές τεχνολογίες χρησιμοποιούνται στην ανάπτυξη του Προγράμματος Σπουδών, τη διδασκαλία, την αξιολόγηση και τη μάθηση· ψηφιακός γραμματισμός και ΑΙ, διαφοροποίηση κ.τ.λ.</p></div>
+      <div class="theme-card"><div class="theme-num-badge">02</div><h3 class="theme-title">Νέοι Γραμματισμοί και Βιόκοσμοι Μαθητών/τριών</h3><p class="theme-body">Αξιοποίηση της διαφορετικότητας/ταυτότητας των μαθητών/τριών στις κοινωνικές επιστήμες, STEM, πολυγραμματισμοί, πολυγλωσσία κ.τ.λ.</p></div>
+      <div class="theme-card"><div class="theme-num-badge">03</div><h3 class="theme-title">Νέες Δεξιότητες και Ψηφιακή Πολιτειότητα</h3><p class="theme-body">Μελέτη των τρόπων/πρακτικών με τους οποίους προωθείται ένα ασφαλές, δίκαιο και συνεργατικό ψηφιακό εκπαιδευτικό περιβάλλον.</p></div>
+      <div class="theme-card"><div class="theme-num-badge">04</div><h3 class="theme-title">Σχολικές Κοινότητες Μάθησης και Διαπολιτισμική Ηγεσία</h3><p class="theme-body">Εξέταση των τρόπων υποστήριξης της διοικητικής λειτουργίας και βελτίωσης της εκπαιδευτικής διαδικασίας με ΤΝ και δημοκρατικής συνύπαρξης μέσω διαπολιτισμικού διαλόγου.</p></div>
+      <div class="theme-card"><div class="theme-num-badge">05</div><h3 class="theme-title">Σχολική Διαμεσολάβηση και Ενδυνάμωση της Σχολικής Κοινότητας</h3><p class="theme-body">Διερεύνηση πρακτικών σχολικής διαμεσολάβησης και αξιοποίηση εργαλείων ΤΝ για πρόληψη και διαχείριση συγκρούσεων, με στόχο την ενίσχυση συμμετοχής και αποδοχής της διαφορετικότητας.</p></div>
+      <div class="theme-card"><div class="theme-num-badge">06</div><h3 class="theme-title">Επαγγελματική Μάθηση Εκπαιδευτικών και Ενδοσχολική Επιμόρφωση</h3><p class="theme-body">Διερεύνηση του μεταβαλλόμενου ρόλου του εκπαιδευτικού στο ψηφιακό περιβάλλον και εξέταση σύγχρονων μορφών επαγγελματικής ανάπτυξης με αξιοποίηση ΤΝ για στήριξη της διδακτικής πρακτικής και αναστοχαστικής επαγγελματικής πρακτικής.</p></div>
+      <div class="theme-card"><div class="theme-num-badge">07</div><h3 class="theme-title">Κώδικας Δεοντολογίας, Ζητήματα Ασφάλειας και Ηθικές Προκλήσεις</h3><p class="theme-body">Αρχές δεοντολογίας, υπευθυνότητας και παιδαγωγικής αξιοποίησης της ΤΝ στη διδασκαλία και τη μάθηση· ζητήματα ασφάλειας, bias/fakes.</p></div>
+      <div class="theme-card"><div class="theme-num-badge">08</div><h3 class="theme-title">Τέχνες στην Εκπαίδευση και Τεχνητή Νοημοσύνη</h3><p class="theme-body">Διερεύνηση της συμβολής των τεχνών στην ανάπτυξη δημιουργικότητας, κριτικής σκέψης και πολιτισμικής έκφρασης με αξιοποίηση εργαλείων ΤΝ.</p></div>
+      <div class="theme-card"><div class="theme-num-badge">09</div><h3 class="theme-title">Ειδική Αγωγή και Συμπεριληπτική Εκπαίδευση</h3><p class="theme-body">Εξέταση των δυνατοτήτων αξιοποίησης ΤΝ για υποστήριξη διαφοροποιημένης διδασκαλίας, έγκαιρη ανίχνευση μαθησιακών δυσκολιών και ενίσχυση συμπεριληπτικών πρακτικών στο πλαίσιο ειδικής αγωγής.</p></div>
     </div>
   </div>
 </section>
@@ -663,7 +676,7 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
         <span class="section-tag">Οδηγίες Υποβολής</span>
         <div class="green-bar"></div>
         <h2 class="section-title">Βήματα Υποβολής Εργασίας</h2>
-        <p class="section-body">Αποκλειστικά ηλεκτρονικά σε .docx στο email του Συνεδρίου. Έως <strong>δύο (2) περιλήψεις</strong> ανά συμμετέχοντα.</p>
+        <p class="section-body">Αποκλειστικά ηλεκτρονικά σε .docx στο email του Συνεδρίου. Έως <strong>δύο (2) περιλήψεις</strong> ανά συμμετέχοντα/ούσα.</p>
         <div class="steps">
           <div class="step"><div class="step-dot">1</div><div class="step-content"><div class="step-title">Επιλογή Θεματικής Ενότητας</div><div class="step-body">Επιλέξτε από τις 9 θεματικές περιοχές.</div></div></div>
           <div class="step"><div class="step-dot">2</div><div class="step-content"><div class="step-title">Σύνταξη Περίληψης (έως 250 λέξεις)</div><div class="step-body">Τίτλος · θεματική · εισαγωγή · σκοπός · μεθοδολογία · αποτελέσματα · 3–4 λέξεις-κλειδιά.</div></div></div>
@@ -694,6 +707,33 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
           <div class="dl-label">⏰ Καταληκτική Ημερομηνία Υποβολής</div>
           <div class="dl-date" id="dl-deadline"></div>
           <div class="dl-note">Αποτελέσματα αξιολόγησης: <span id="dl-axiologisi"></span><br></div>
+        </div>
+
+        <div style="margin-top:14px;background:#fff;border:1px solid var(--br);border-left:4px solid var(--p);border-radius:0 10px 10px 0;padding:22px 20px;">
+          <div style="font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--p);margin-bottom:10px;">📚 Δημοσίευση Πρακτικών</div>
+          <p style="font-size:.85rem;color:var(--mu);line-height:1.75;margin-bottom:12px;">
+            Η υποβολή πλήρους άρθρου είναι <strong style="color:var(--gd)">προαιρετική</strong> και
+            απαιτείται μόνο για τη συμπερίληψη στα Πρακτικά του Συνεδρίου.
+          </p>
+          <div style="font-size:.78rem;color:var(--pm);font-weight:500;">
+            🔔 Αναλυτικές πληροφορίες και οδηγίες για την υποβολή άρθρων θα ανακοινωθούν σύντομα.
+          </div>
+        </div>
+
+        <div style="margin-top:14px;background:var(--off);border:1px solid var(--br);border-left:4px solid #888780;border-radius:0 10px 10px 0;padding:22px 20px;">
+          <div style="font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#5F5E5A;margin-bottom:12px;">⚖️ Πολιτική Λογοκλοπής</div>
+          <p style="font-size:.83rem;color:var(--mu);line-height:1.8;">
+            Οι προς δημοσίευση εργασίες πρέπει να είναι πρωτότυπες και να μην έχουν υποβληθεί
+            ή δημοσιευθεί σε άλλο συνέδριο ή περιοδικό. Όλες οι υποβολές θα ελεγχθούν με χρήση
+            ειδικών λογισμικών ανίχνευσης ομοιοτήτων και λογοκλοπής και τυχόν περιπτώσεις υψηλής
+            ομοιότητας θα διερευνηθούν περαιτέρω.
+          </p>
+          <p style="font-size:.83rem;color:var(--mu);line-height:1.8;margin-top:10px;">
+            Η λογοκλοπή καθώς και η <strong style="color:var(--tx)">αυτολογοκλοπή</strong>
+            (αναπαραγωγή υλικού από προηγούμενες δημοσιεύσεις των ίδιων συγγραφέων χωρίς ορθή αναφορά)
+            απαγορεύονται ρητά. Οποιαδήποτε αναφορά σε σχετικό προηγούμενο έργο των συγγραφέων
+            πρέπει να δηλώνεται ρητά και να εξηγείται με σαφήνεια η διαφορά της νέας υποβολής από αυτό.
+          </p>
         </div>
       </div>
     </div>
@@ -743,12 +783,12 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
       <!-- 1η Ανακοίνωση -->
       <div class="ann-card ann-card--featured">
         <div class="ann-meta">
-          <span class="ann-tag">Πρώτη Ανακοίνωση</span>
+          <span class="ann-tag">1<sup>η</sup> Ανακοίνωση</span>
           <span class="ann-date">Μάρτιος 2026</span>
         </div>
-        <h3 class="ann-title">Πρόσκληση Υποβολής Εργασιών — Call for Papers 2026</h3>
+        <h3 class="ann-title">1<sup>η</sup> Ανακοίνωση — Πρόσκληση Υποβολής Εργασιών</h3>
         <p class="ann-body">
-          Καλούνται εκπαιδευτικοί, ερευνητές και φοιτητές να υποβάλουν εργασίες στο
+          Υποβάλλονται εκπαιδευτικοί, ερευνητές και φοιτητές να υποβάλουν εργασίες στο
           4ο Συνέδριο Πρωτοβάθμιας Εκπαίδευσης &amp; ΤΝ. Καταληκτική ημερομηνία υποβολής:
           <strong>15 Ιουνίου 2026</strong>. Εγγραφή συμμετοχής: <strong>ΔΩΡΕΑΝ</strong>.
         </p>
@@ -793,10 +833,10 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
         </iframe>
       </div>
       <div class="venue-details">
-        <div class="venue-row"><div class="vr-label">Χώρος</div><div class="vr-val">Συνεδριακό Κέντρο Πανεπιστημίου Πατρών</div><div class="vr-sub">Ρίο Πάτρας, Αχαΐα, Ελλάδα</div></div>
+        <div class="venue-row"><div class="vr-label">Χώρος</div><div class="vr-val">Συνεδριακό Κέντρο Πανεπιστημίου Πατρών</div><div class="vr-sub">Πάτρα, Αχαΐα, Ελλάδα</div></div>
         <div class="venue-row"><div class="vr-label">Ημερομηνίες</div><div class="vr-val" id="venue-imeres"></div><div class="vr-sub">Παρασκευή &amp; Σάββατο</div></div>
         <div class="venue-row"><div class="vr-label">Διοργανωτές</div><div class="vr-val" id="venue-org1"></div><div class="vr-sub" id="venue-org2"></div></div>
-        <div class="venue-row"><div class="vr-label">Πρόσβαση</div><div class="vr-val">Ρίο Πάτρας</div><div class="vr-sub">Λεπτομέρειες μεταφοράς &amp; διαμονής σύντομα.</div></div>
+        <div class="venue-row"><div class="vr-label">Πρόσβαση</div><div class="vr-val">Πάτρα</div><div class="vr-sub">Λεπτομέρειες μεταφοράς &amp; διαμονής σύντομα.</div></div>
       </div>
     </div>
   </div>
@@ -1065,6 +1105,518 @@ window.addEventListener('scroll',()=>{
 });
 
 
+
+/* ── LANGUAGE SWITCHER ───────────────────────────────────────────── */
+const EN = {
+  /* NAV */
+  'nav-about':    'Conference',
+  'nav-themes':   'Themes',
+  'nav-speakers': 'Speakers',
+  'nav-part':     'Participation',
+  'nav-sub':      'Submission',
+  'nav-reg':      'Registration',
+  'nav-ann':      'Announcements',
+  'nav-venue':    'Venue',
+  'nav-contact':  'Contact',
+  'nav-cta':      'Register',
+  /* HERO */
+  'hero-title-el': null,
+  'hero-sub-el':   'From digital equality to inclusive innovation',
+  'meta-label-date':    'Date',
+  'meta-label-place':   'Venue',
+  'meta-label-sub':     'Submission by',
+  'meta-label-reg':     'Registration',
+  'hero-btn1': 'Register — Free',
+  'hero-btn2': 'Submit Paper',
+  'cd-label':  'Countdown to submission deadline',
+  'cd-days':   'Days', 'cd-hours': 'Hours', 'cd-mins': 'Minutes', 'cd-secs': 'Sec.',
+  /* ABOUT */
+  'about-tag':   'Purpose & Goals',
+  'about-title': 'About the Conference',
+  'about-body':  'The Conference highlights the challenges and opportunities arising from the integration of AI in primary education, with emphasis on inclusion, digital equity, and professional development of educators.',
+  /* THEMES */
+  'themes-tag':   'Thematic Areas',
+  'themes-title': 'Fields of Interest & Submission',
+  'themes-body':  'Authors are invited to submit abstracts directly related to the central theme of the Conference and its thematic areas. Each participant may submit up to <strong>two (2) abstracts</strong>. Abstracts must be original and comply with the principles of academic integrity, scientific structure, and methodological soundness.',
+  /* SECTIONS */
+  'part-tag':   'Participation Types',
+  'part-title': 'How to Participate',
+  'sub-tag':    'Submission Guidelines',
+  'sub-title':  'How to Submit a Paper',
+  'reg-tag':    'Registration',
+  'reg-title':  'Register Now',
+  'ann-tag':    'Announcements',
+  'ann-title':  'News & Announcements',
+  'venue-tag':  'Venue',
+  'venue-title':'Conference Venue',
+  'contact-tag':  'Contact',
+  'contact-title':'Get in Touch',
+  /* FOOTER */
+  'footer-title': 'Conference on Primary Education & AI 2026',
+};
+
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.getElementById('btn-el').classList.toggle('active', lang==='el');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+
+  /* nav links text */
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const navTextsEl = ['Συνέδριο','Θεματικές','Ομιλητές','Συμμετοχή','Υποβολή','Εγγραφές','Ανακοινώσεις','Χώρος','Επικοινωνία'];
+  const navTextsEn = ['Conference','Themes','Speakers','Participation','Submission','Registration','Announcements','Venue','Contact'];
+  navLinks.forEach((a,i) => { if(lang==='en' && navTextsEn[i]) a.textContent=navTextsEn[i]; else if(navTextsEl[i]) a.textContent=navTextsEl[i]; });
+
+  /* nav cta */
+  const cta = document.querySelector('.nav-cta');
+  if(cta) cta.textContent = lang==='en' ? 'Register' : 'Δήλωση Συμμετοχής';
+
+  /* hero */
+  const heroSub = document.getElementById('hero-sub');
+  if(heroSub) heroSub.textContent = lang==='en'
+    ? 'From digital equality to inclusive innovation'
+    : CONFIG.ypotitlos;
+
+  const heroTitle = document.getElementById('hero-title');
+  if(heroTitle) heroTitle.innerHTML = lang==='en'
+    ? 'Primary Education<br><span class="accent">in the Age of Artificial Intelligence</span>'
+    : (CONFIG.titlos.includes(':')
+        ? CONFIG.titlos.split(':')[0]+':<br><span class="accent">'+CONFIG.titlos.split(':').slice(1).join(':').trim()+'</span>'
+        : CONFIG.titlos);
+
+  const heroBtn1 = document.querySelector('.hero-btns a:first-child');
+  const heroBtn2 = document.querySelector('.hero-btns a:last-child');
+  if(heroBtn1) heroBtn1.textContent = lang==='en' ? 'Register — Free' : 'Δήλωση Συμμετοχής — Δωρεάν';
+  if(heroBtn2) heroBtn2.textContent = lang==='en' ? 'Submit Paper' : 'Υποβολή Εργασίας';
+
+  /* countdown label */
+  const cdLabel = document.querySelector('.countdown-label');
+  if(cdLabel) cdLabel.textContent = lang==='en' ? 'Countdown to submission deadline' : 'Αντίστροφη μέτρηση για υποβολή εργασιών';
+
+  /* section tags & titles — map by section id */
+  const sectionMap = {
+    about:        { tag:"Σκοπός & Στόχοι", title:"Για το Συνέδριο",          tagEn:"Purpose & Goals",       titleEn:"About the Conference" },
+    themes:       { tag:"Θεματικές Περιοχές", title:"Πεδία Ενδιαφέροντος & Υποβολής", tagEn:"Thematic Areas", titleEn:"Fields of Interest & Submission" },
+    speakers:     { tag:"Ομιλητές & Πρόγραμμα", title:"Προσκεκλημένοι Ομιλητές<br>&amp; Πρόγραμμα Συνεδρίου", tagEn:"Speakers & Program", titleEn:"Invited Speakers<br>&amp; Conference Program" },
+    participation:{ tag:"Μορφές Συμμετοχής", title:"Πώς να Συμμετέχετε",     tagEn:"Participation Types",   titleEn:"How to Participate" },
+    submissions:  { tag:"Οδηγίες Υποβολής", title:"Βήματα Υποβολής Εργασίας", tagEn:"Submission Guidelines", titleEn:"How to Submit a Paper" },
+    registration: { tag:"Εγγραφές & Συμμετοχή", title:"Δηλώστε Συμμετοχή",   tagEn:"Registration",          titleEn:"Register Now" },
+    announcements:{ tag:"Ανακοινώσεις", title:"Νέα & Ανακοινώσεις",           tagEn:"Announcements",         titleEn:"News & Announcements" },
+    venue:        { tag:"Χώρος Διεξαγωγής", title:"Συνεδριακό Κέντρο<br>Πανεπιστημίου Πατρών", tagEn:"Venue", titleEn:"Conference Centre<br>University of Patras" },
+    contact:      { tag:"Επικοινωνία", title:"Επικοινωνήστε μαζί μας",        tagEn:"Contact",               titleEn:"Get in Touch" },
+  };
+  for(const [id, texts] of Object.entries(sectionMap)){
+    const sec = document.getElementById(id);
+    if(!sec) continue;
+    const tagEl = sec.querySelector('.section-tag');
+    const titleEl = sec.querySelector('.section-title');
+    if(tagEl) tagEl.textContent = lang==='en' ? texts.tagEn : texts.tag;
+    if(titleEl) titleEl.innerHTML = lang==='en' ? texts.titleEn : texts.title;
+  }
+
+  /* ── Full body text translation ── */
+  const bodyTranslations = {
+    'about-body-el': 'Το Συνέδριο αναδεικνύει τις προκλήσεις και ευκαιρίες από την ενσωμάτωση της ΤΝ στην πρωτοβάθμια εκπαίδευση, με έμφαση στη συμπερίληψη, τη ψηφιακή ισότητα και την επαγγελματική ανάπτυξη εκπαιδευτικών.',
+    'about-body-en': 'The Conference highlights challenges and opportunities arising from AI integration in primary education, with emphasis on inclusion, digital equity, and professional development of educators.',
+  };
+
+  /* About body paragraph */
+  const aboutBody = document.querySelector('#about .section-body');
+  if(aboutBody) aboutBody.textContent = lang==='en' ? bodyTranslations['about-body-en'] : bodyTranslations['about-body-el'];
+
+  /* About goals */
+  const goalTextsEl = [
+    ["Η εξάλειψη του παιδαγωγικού χάσματος","Η μάθηση δεν διαφοροποιείται παιδαγωγικά ανάλογα με το αν γίνεται στην τάξη ή online. Οι ψηφιακές υποδομές επιτρέπουν ενεργητική συμμετοχή, συνεργασία και συνεχή ανατροφοδότηση."],
+    ["Η ενσωμάτωση της αξιολόγησης στη διδασκαλία","Η αξιολόγηση ενσωματώνεται δημιουργικά στη μαθησιακή διαδικασία μέσα από συνεχή ανατροφοδότηση, αναστοχασμό και μεταγνωστικές δεξιότητες."],
+    ["Η υπέρβαση των ορίων της παραδοσιακής τάξης","Ευέλικτες μορφές μάθησης σε ατομικό, ομαδικό ή κοινοτικό επίπεδο, πέρα από τα παραδοσιακά όρια."],
+    ["Η προσωποποιημένη μάθηση στην κοινότητα","Μέσα από ψηφιακές κοινότητες, συνεργασία, ανταλλαγή ανατροφοδότησης και συνδιαμόρφωση γνώσης."],
+    ["Ο στόχος της επιτυχημένης ένταξης όλων","Κάθε μαθητής/τρια μπορεί να φτάσει στην κατάκτηση της γνώσης — αρχή της καθολικής επιτυχίας."],
+    ["Η επαγγελματική ανάπτυξη εκπαιδευτικών με ψηφιακά εργαλεία","Μέσω ΤΝ, ενδυνάμωση στην υιοθέτηση σύγχρονων μεθοδολογιών που βελτιώνουν την ποιότητα μάθησης."],
+  ];
+  const goalTextsEn = [
+    ['Eliminating the pedagogical gap','Learning does not differ pedagogically between classroom and online. Digital tools enable active participation, collaboration and continuous feedback.'],
+    ['Integrating assessment into teaching','Assessment is embedded creatively in the learning process through continuous feedback, reflection and metacognitive skills.'],
+    ['Transcending traditional classroom boundaries','Flexible learning in individual, group or community settings, beyond traditional classroom limits.'],
+    ['Personalised learning in the community','Through digital communities, collaboration, feedback exchange and co-construction of knowledge.'],
+    ['Successful inclusion of all students','Every student can achieve mastery of knowledge — the principle of universal success.'],
+    ['Professional development of educators','Through AI, empowering educators to adopt modern methodologies that directly improve learning quality.'],
+  ];
+  const goalItems = document.querySelectorAll('.goal-item');
+  goalItems.forEach((item, i) => {
+    const texts = lang==='en' ? goalTextsEn[i] : goalTextsEl[i];
+    if(!texts) return;
+    const strong = item.querySelector('strong');
+    if(strong){ strong.textContent = texts[0]; strong.nextSibling && (strong.nextSibling.textContent = texts[1]); }
+  });
+
+  /* Themes intro body */
+  const themesBody = document.querySelector('#themes .section-body');
+  if(themesBody) themesBody.innerHTML = lang==='en'
+    ? 'Authors are invited to submit abstracts directly related to the Conference theme and thematic areas. Each participant may submit up to <strong>two (2) abstracts</strong>. Abstracts must be original and comply with the principles of academic integrity, scientific structure, and methodological soundness.'
+    : 'Οι συγγραφείς καλούνται να υποβάλουν περιλήψεις που να συνδέονται άμεσα με το κεντρικό θέμα του Συνεδρίου και με τις θεματικές περιοχές. Κάθε συμμετέχων/ούσα μπορεί να υποβάλει έως <strong>δύο (2) περιλήψεις</strong>. Οι περιλήψεις πρέπει να είναι πρωτότυπες και να πληρούν τις αρχές της ακαδημαϊκής δεοντολογίας, της επιστημονικής δομής και της μεθοδολογικής αρτιότητας.';
+
+  /* Participation cards */
+  const partCards = document.querySelectorAll('.part-card');
+  const partEl = [
+    ["Επιστημονικές Ανακοινώσεις","Παρουσίαση ερευνητικής εργασίας με ανώνυμη αξιολόγηση από δύο μέλη Επ. Επιτροπής."],
+    ["Θεματικά Πάνελ – Lightning Talks","Σύντομες παρουσιάσεις σε θεματικά panels συνολικής διάρκειας 60 λεπτών."],
+    ["Βιωματικά Εργαστήρια","Εκπαιδευτικές δράσεις με ενεργό συμμετοχή των παρευρισκομένων."],
+    ["Αναρτημένες Ανακοινώσεις (E-Posters)","Ψηφιακές αφίσες 1920×1080 px (16:9) σε PDF υψηλής ανάλυσης."],
+  ];
+  const partEn = [
+    ["Scientific Presentations","Research presentation with anonymous peer review by two Scientific Committee members."],
+    ["Thematic Panels – Lightning Talks","Short focused presentations in thematic panels, 60 minutes total."],
+    ["Experiential Workshops","Educational activities with active participation of attendees."],
+    ["Poster Presentations (E-Posters)","Digital posters 1920×1080 px (16:9) in high-resolution PDF."],
+  ];
+  partCards.forEach((card, i) => {
+    const texts = lang==='en' ? partEn[i] : partEl[i];
+    if(!texts) return;
+    const title = card.querySelector('.part-title');
+    const body  = card.querySelector('.part-body');
+    if(title) title.textContent = texts[0];
+    if(body)  body.textContent  = texts[1];
+  });
+
+  /* Venue details */
+  const venueTitleEl  = document.querySelector('#venue .section-title');
+  if(venueTitleEl) venueTitleEl.innerHTML = lang==='en'
+    ? 'Conference Centre<br>University of Patras'
+    : 'Συνεδριακό Κέντρο<br>Πανεπιστημίου Πατρών';
+
+  /* Contact cards */
+  const contactLabels = document.querySelectorAll('.cc-label');
+  const contactLabelEl = ['Email Συνεδρίου','Ιστότοπος','Φορέας'];
+  const contactLabelEn = ['Conference Email','Website','Organiser'];
+  contactLabels.forEach((el, i) => { el.textContent = lang==='en' ? contactLabelEn[i] : contactLabelEl[i]; });
+
+  /* Registration */
+  const regBadge = document.getElementById('reg-kostos-badge');
+  if(regBadge) regBadge.textContent = lang==='en' ? 'Participation FREE' : 'Συμμετοχή ΔΩΡΕΑΝ';
+  const regInfo = document.getElementById('reg-info');
+  if(regInfo) regInfo.textContent = lang==='en'
+    ? 'Registration is exclusively electronic. More information coming soon.'
+    : CONFIG.egrafes_info;
+  const regCta = document.getElementById('reg-kostos-cta');
+  if(regCta) regCta.textContent = lang==='en' ? 'FREE' : CONFIG.egrafes_kostos;
+
+  /* Submission steps */
+  const stepTitles = document.querySelectorAll('.step-title');
+  const stepTitleEl = [
+    "Επιλογή Θεματικής Ενότητας","Σύνταξη Περίληψης (έως 250 λέξεις)","Μορφοποίηση Αρχείου","Αποστολή Email","Αξιολόγηση & Αποτελέσματα"
+  ];
+  const stepTitleEn = [
+    "Select Thematic Area","Write Abstract (up to 250 words)","File Formatting","Send by Email","Evaluation & Results"
+  ];
+  stepTitles.forEach((el, i) => { el.textContent = lang==='en' ? stepTitleEn[i] : stepTitleEl[i]; });
+
+  /* Announcements */
+  const annTitle = document.querySelector('.ann-card--featured .ann-title');
+  if(annTitle) annTitle.innerHTML = lang==='en'
+    ? '1<sup>st</sup> Announcement — Call for Papers 2026'
+    : '1<sup>η</sup> Ανακοίνωση — Πρόσκληση Υποβολής Εργασιών';
+  const annBody = document.querySelector('.ann-card--featured .ann-body');
+  if(annBody) annBody.innerHTML = lang==='en'
+    ? 'Educators, researchers and students are invited to submit papers to the Conference on Primary Education &amp; AI. Submission deadline: <strong>15 June 2026</strong>. Registration: <strong>FREE</strong>.'
+    : 'Καλούνται εκπαιδευτικοί, ερευνητές και φοιτητές να υποβάλουν εργασίες στο Συνέδριο Πρωτοβάθμιας Εκπαίδευσης &amp; ΤΝ. Καταληκτική ημερομηνία: <strong>15 Ιουνίου 2026</strong>. Συμμετοχή: <strong>ΔΩΡΕΑΝ</strong>.';
+
+  /* Footer */
+  const footerTitle = document.getElementById('footer-title');
+  if(footerTitle) footerTitle.textContent = lang==='en'
+    ? 'Conference on Primary Education & AI 2026'
+    : 'Συνέδριο Πρωτοβάθμιας Εκπαίδευσης & ΤΝ 2026';
+
+  /* Org tags */
+  const orgTags = document.querySelectorAll('.org-tag');
+  if(orgTags[0]) orgTags[0].textContent = lang==='en' ? 'TEAEPH, University of Patras' : CONFIG.diorganotes1;
+  if(orgTags[1]) orgTags[1].textContent = lang==='en' ? 'Directorate of Primary Education of Achaia' : CONFIG.diorganotes2;
+
+  localStorage.setItem('lang', lang);
+
+
+  /* Hero meta labels */
+  const metaItems = document.querySelectorAll('.hero-meta-item');
+  const metaLabelsEl = ['Ημερομηνία','Χώρος','Υποβολή έως','Εγγραφή'];
+  const metaLabelsEn = ['Date','Venue','Submission by','Registration'];
+  metaItems.forEach((item, i) => {
+    const lbl = item.querySelector('.meta-label');
+    if(lbl) lbl.textContent = lang==='en' ? metaLabelsEn[i] : metaLabelsEl[i];
+  });
+
+  /* Hero meta values that need translation */
+  const metaDeadline = document.getElementById('meta-deadline');
+  if(metaDeadline) metaDeadline.textContent = lang==='en' ? '15 June 2026' : CONFIG.deadline_ypovolis;
+
+  const metaKostos = document.getElementById('meta-kostos');
+  if(metaKostos) metaKostos.textContent = lang==='en' ? 'FREE' : CONFIG.egrafes_kostos;
+
+  /* Countdown label units */
+  const cdUnits = document.querySelectorAll('.cd-unit');
+  const cdUnitsEl = ['Μέρες','Ώρες','Λεπτά','Δευτ.'];
+  const cdUnitsEn = ['Days','Hours','Minutes','Sec.'];
+  cdUnits.forEach((el, i) => { el.textContent = lang==='en' ? cdUnitsEn[i] : cdUnitsEl[i]; });
+
+  /* Venue meta values */
+  const venueImeres = document.getElementById('venue-imeres');
+  if(venueImeres) venueImeres.textContent = lang==='en' ? '18–19 September 2026' : CONFIG.imeres;
+
+  /* Submission deadline box */
+  const dlDeadline = document.getElementById('dl-deadline');
+  if(dlDeadline) dlDeadline.textContent = lang==='en' ? '15 June 2026' : CONFIG.deadline_ypovolis;
+  const dlAxiologisi = document.getElementById('dl-axiologisi');
+  if(dlAxiologisi) dlAxiologisi.textContent = lang==='en' ? 'To be announced' : CONFIG.deadline_axiologisis;
+  const stepAxiologisi = document.getElementById('step-axiologisi');
+  if(stepAxiologisi) stepAxiologisi.textContent = lang==='en' ? 'To be announced' : CONFIG.deadline_axiologisis;
+
+  /* Format box values */
+  const formatVals = document.querySelectorAll('.format-val');
+  const fmtEl = ['.docx (Word)','250','Times New Roman 12pt','Μονό','2,54 εκ.','3,18 εκ.','2 ανά άτομο'];
+  const fmtEn = ['.docx (Word)','250','Times New Roman 12pt','Single','2.54 cm','3.18 cm','2 per person'];
+  formatVals.forEach((el, i) => {
+    if(fmtEl[i]) el.textContent = lang==='en' ? fmtEn[i] : fmtEl[i];
+  });
+
+  /* Submission body */
+  const subBody = document.querySelector('#submissions .section-body');
+  if(subBody) subBody.innerHTML = lang==='en'
+    ? 'Exclusively via email in .docx format. Up to <strong>two (2) abstracts</strong> per participant.'
+    : 'Αποκλειστικά ηλεκτρονικά σε .docx στο email του Συνεδρίου. Έως <strong>δύο (2) περιλήψεις</strong> ανά συμμετέχοντα/ούσα.';
+
+  /* Registration body */
+  const regTitle = document.querySelector('#registration .reg-cta-box h3');
+  if(regTitle) regTitle.innerHTML = lang==='en'
+    ? 'Registration — <span id="reg-kostos-cta">FREE</span>'
+    : 'Δήλωση Συμμετοχής — <span id="reg-kostos-cta">ΔΩΡΕΑΝ</span>';
+
+
+  /* ── NAV logo text ── */
+  const navLogoTop = document.querySelector('nav a[href="#hero"] div div:first-child');
+  const navLogoBot = document.querySelector('nav a[href="#hero"] div div:last-child');
+  if(navLogoTop) navLogoTop.textContent = lang==='en' ? 'CONFERENCE 2026 · PATRAS' : 'ΣΥΝΕΔΡΙΟ 2026 · ΠΑΤΡΑ';
+  if(navLogoBot) navLogoBot.textContent = lang==='en' ? 'Primary Education & AI' : 'Πρωτοβάθμια Εκπ/ση & ΤΝ';
+
+  /* ── Hero meta venue value ── */
+  const metaVenue = document.querySelectorAll('.meta-value')[1];
+  if(metaVenue) metaVenue.textContent = lang==='en' ? 'University of Patras' : 'Πανεπιστήμιο Πατρών';
+
+  /* ── Hero date value ── */
+  const metaDate = document.querySelectorAll('.meta-value')[0];
+  if(metaDate) metaDate.textContent = lang==='en' ? '18–19 September 2026' : CONFIG.imeres;
+
+  /* ── About stats labels ── */
+  const statLabels = document.querySelectorAll('.stat-small');
+  const statEl = ['Ημέρες','Θεματικές','Μορφές Συμμετοχής','Λέξεις / Περίληψη'];
+  const statEn = ['Days','Themes','Participation Types','Words / Abstract'];
+  statLabels.forEach((el,i)=>{ if(statEl[i]) el.textContent = lang==='en' ? statEn[i] : statEl[i]; });
+
+  /* ── Org label ── */
+  const orgLabel = document.querySelector('.org-label');
+  if(orgLabel) orgLabel.textContent = lang==='en' ? 'Organisers' : 'Διοργανωτές';
+
+  /* ── Theme cards EN titles & bodies ── */
+  const themeCards = document.querySelectorAll('.theme-card');
+  const themeTitlesEl = [
+    'Ψηφιακές Παιδαγωγικές και Πρόγραμμα Σπουδών',
+    'Νέοι Γραμματισμοί και Βιόκοσμοι Μαθητών/τριών',
+    'Νέες Δεξιότητες και Ψηφιακή Πολιτειότητα',
+    'Σχολικές Κοινότητες Μάθησης και Διαπολιτισμική Ηγεσία',
+    'Σχολική Διαμεσολάβηση και Ενδυνάμωση της Σχολικής Κοινότητας',
+    'Επαγγελματική Μάθηση Εκπαιδευτικών και Ενδοσχολική Επιμόρφωση',
+    'Κώδικας Δεοντολογίας, Ζητήματα Ασφάλειας και Ηθικές Προκλήσεις',
+    'Τέχνες στην Εκπαίδευση και Τεχνητή Νοημοσύνη',
+    'Ειδική Αγωγή και Συμπεριληπτική Εκπαίδευση',
+  ];
+    const themeTitlesEn = [
+    "Digital Pedagogies and Curriculum",
+    "New Literacies and Students’ Lifeworlds",
+    "New Skills and Digital Citizenship",
+    "School Learning Communities and Intercultural Leadership",
+    "School Mediation and Empowerment of the School Community",
+    "Professional Learning of Teachers and In-School Training",
+    "Code of Ethics, Safety Issues and Ethical Challenges in AI",
+    "Arts in Education and Artificial Intelligence",
+    "Special Education and Inclusive Education",
+  ];
+  const themeBodiesEl = [
+    'Μελέτη του τρόπου με τον οποίο οι ψηφιακές τεχνολογίες χρησιμοποιούνται στην ανάπτυξη του Προγράμματος Σπουδών, τη διδασκαλία, την αξιολόγηση και τη μάθηση· ψηφιακός γραμματισμός και ΑΙ, διαφοροποίηση κ.τ.λ.',
+    'Αξιοποίηση της διαφορετικότητας/ταυτότητας των μαθητών/τριών στις κοινωνικές επιστήμες, STEM, πολυγραμματισμοί, πολυγλωσσία κ.τ.λ.',
+    'Μελέτη των τρόπων/πρακτικών με τους οποίους προωθείται ένα ασφαλές, δίκαιο και συνεργατικό ψηφιακό εκπαιδευτικό περιβάλλον.',
+    'Εξέταση των τρόπων υποστήριξης της διοικητικής λειτουργίας και βελτίωσης της εκπαιδευτικής διαδικασίας με ΤΝ και δημοκρατικής συνύπαρξης μέσω διαπολιτισμικού διαλόγου.',
+    'Διερεύνηση πρακτικών σχολικής διαμεσολάβησης και αξιοποίηση εργαλείων ΤΝ για πρόληψη και διαχείριση συγκρούσεων, με στόχο την ενίσχυση συμμετοχής και αποδοχής της διαφορετικότητας.',
+    'Διερεύνηση του μεταβαλλόμενου ρόλου του εκπαιδευτικού στο ψηφιακό περιβάλλον και εξέταση σύγχρονων μορφών επαγγελματικής ανάπτυξης με αξιοποίηση ΤΝ για στήριξη της διδακτικής πρακτικής και αναστοχαστικής επαγγελματικής πρακτικής.',
+    'Αρχές δεοντολογίας, υπευθυνότητας και παιδαγωγικής αξιοποίησης της ΤΝ στη διδασκαλία και τη μάθηση· ζητήματα ασφάλειας, bias/fakes.',
+    'Διερεύνηση της συμβολής των τεχνών στην ανάπτυξη δημιουργικότητας, κριτικής σκέψης και πολιτισμικής έκφρασης με αξιοποίηση εργαλείων ΤΝ.',
+    'Εξέταση των δυνατοτήτων αξιοποίησης ΤΝ για υποστήριξη διαφοροποιημένης διδασκαλίας, έγκαιρη ανίχνευση μαθησιακών δυσκολιών και ενίσχυση συμπεριληπτικών πρακτικών στο πλαίσιο ειδικής αγωγής.',
+  ];
+  const themeBodiesEn = [
+    "Study of how digital technologies are used in curriculum development, teaching, assessment and learning; digital literacy and AI, differentiation, etc.",
+    "Leveraging students’ diversity/identity in the social sciences, STEM, multiliteracies, multilingualism, etc.",
+    "Study of ways/practices that promote a safe, fair and collaborative digital educational environment.",
+    "Examining ways to support administrative functioning and improve the educational process through AI and democratic coexistence via intercultural dialogue.",
+    "Exploring school mediation practices and AI tools for conflict prevention and management, aimed at enhancing participation and acceptance of diversity.",
+    "Exploring the evolving role of the teacher in the digital learning environment and contemporary forms of professional development using AI to support teaching practice and reflective professional practice.",
+    "Principles of ethics, accountability and pedagogical use of AI in teaching and learning; safety issues, bias/fakes.",
+    "Exploring the contribution of arts to creativity, critical thinking and cultural expression through the use of AI tools.",
+    "Examining AI possibilities to support differentiated instruction, early detection of learning difficulties and strengthening inclusive practices in special education.",
+  ];
+  themeCards.forEach((card, i) => {
+    const title = card.querySelector('.theme-title');
+    const body  = card.querySelector('.theme-body');
+    if(title) title.textContent = lang==='en' ? themeTitlesEn[i] : themeTitlesEl[i];
+    if(body)  body.textContent  = lang==='en' ? themeBodiesEn[i] : themeBodiesEl[i];
+  });
+
+  /* ── Speakers section ── */
+  const spTab1 = document.querySelectorAll('.sp-tab')[0];
+  const spTab2 = document.querySelectorAll('.sp-tab')[1];
+  if(spTab1) spTab1.textContent = lang==='en' ? 'Speakers' : 'Ομιλητές';
+  if(spTab2) spTab2.textContent = lang==='en' ? 'Programme' : 'Πρόγραμμα';
+  document.querySelectorAll('.speaker-name').forEach(el => {
+    if(el.textContent.includes('Ομιλητής')) el.textContent = lang==='en' ? 'Invited Speaker' : 'Προσκεκλημένος Ομιλητής';
+  });
+  document.querySelectorAll('.speaker-role').forEach(el => {
+    if(el.textContent.includes('ανακοιν')) el.textContent = lang==='en' ? 'To be announced' : 'Θα ανακοινωθεί';
+  });
+  document.querySelectorAll('.speaker-topic').forEach(el => {
+    if(el.textContent.includes('υπό')) el.textContent = lang==='en' ? 'Topic to be confirmed' : 'Θέμα ομιλίας υπό επιβεβαίωση';
+  });
+  document.querySelectorAll('.speaker-coming').forEach(el => {
+    el.textContent = lang==='en' ? 'Coming soon' : 'Σύντομα';
+  });
+
+  /* ── Format box keys (labels) ── */
+  const formatKeys = document.querySelectorAll('.format-key');
+  const fmtKeysEl = [
+    "Μορφή","Μέγιστο λέξεων","Γραμματοσειρά","Διάστιχο","Περιθώρια άνω/κάτω","Περιθώρια αριστ./δεξ.","Max περιλήψεις"
+  ];
+  const fmtKeysEn = [
+    "Format","Max words","Font","Line spacing","Top/bottom margins","Left/right margins","Max abstracts"
+  ];
+  formatKeys.forEach((el,i)=>{ if(fmtKeysEl[i]) el.textContent = lang==='en' ? fmtKeysEn[i] : fmtKeysEl[i]; });
+
+  /* ── Format box titles ── */
+  const formatTitles = document.querySelectorAll('.format-title');
+  const ftEl = ['📋 Τεχνικές Προδιαγραφές Περίληψης','🖼️ E-Poster Προδιαγραφές'];
+  const ftEn = ['📋 Technical Abstract Specifications','🖼️ E-Poster Specifications'];
+  formatTitles.forEach((el,i)=>{ el.textContent = lang==='en' ? ftEn[i] : ftEl[i]; });
+
+  /* ── E-poster keys ── */
+  const ePosterRows = document.querySelectorAll('.format-box:nth-of-type(2) .format-key, .format-box + .format-box .format-key');
+  const epKeysEl = ['Αναλογία','Διαστάσεις','Μορφή','Γραμματοσειρές'];
+  const epKeysEn = ['Ratio','Dimensions','Format','Fonts'];
+  ePosterRows.forEach((el,i)=>{ if(epKeysEl[i]) el.textContent = lang==='en' ? epKeysEn[i] : epKeysEl[i]; });
+
+  /* ── Deadline box label ── */
+  const dlLabel = document.querySelector('.dl-label');
+  if(dlLabel) dlLabel.textContent = lang==='en' ? '⏰ Submission Deadline' : '⏰ Καταληκτική Ημερομηνία Υποβολής';
+  const dlNote = document.querySelector('.dl-note');
+  if(dlNote) dlNote.innerHTML = lang==='en'
+    ? 'Evaluation results: <span id="dl-axiologisi">To be announced</span>'
+    : 'Αποτελέσματα αξιολόγησης: <span id="dl-axiologisi">' + CONFIG.deadline_axiologisis + '</span>';
+
+  /* ── Publications & Plagiarism boxes ── */
+  const pubBoxTitle = document.querySelector('[style*="color:var(--p);margin-bottom:10px"]');
+  if(pubBoxTitle && pubBoxTitle.textContent.includes('Πρακτικ')){
+    pubBoxTitle.textContent = lang==='en' ? '📚 Publication of Proceedings' : '📚 Δημοσίευση Πρακτικών';
+    const pubP = pubBoxTitle.nextElementSibling;
+    if(pubP) pubP.innerHTML = lang==='en'
+      ? 'Submission of a full article is <strong>optional</strong> and required only for inclusion in the Conference Proceedings.'
+      : 'Η υποβολή πλήρους άρθρου είναι <strong style="color:var(--gd)">προαιρετική</strong> και απαιτείται μόνο για τη συμπερίληψη στα Πρακτικά του Συνεδρίου.';
+    const pubNote = pubBoxTitle.parentElement.querySelector('[style*="color:var(--pm)"]');
+    if(pubNote) pubNote.textContent = lang==='en'
+      ? '🔔 Detailed guidelines for full article submission will be announced soon.'
+      : '🔔 Αναλυτικές πληροφορίες και οδηγίες για την υποβολή άρθρων θα ανακοινωθούν σύντομα.';
+  }
+
+  /* ── Plagiarism box ── */
+  const plagBoxes = document.querySelectorAll('[style*="color:#5F5E5A"]');
+  plagBoxes.forEach(el => {
+    if(el.textContent.includes('Λογοκλοπ')){
+      el.textContent = lang==='en' ? '⚖️ Plagiarism Policy' : '⚖️ Πολιτική Λογοκλοπής';
+      const ps = el.parentElement.querySelectorAll('p');
+      if(ps[0]) ps[0].textContent = lang==='en'
+        ? "Papers must be original and must not have been submitted or published in another conference or journal. All submissions will be checked using similarity detection software and cases of high similarity will be investigated further."
+        : 'Οι προς δημοσίευση εργασίες πρέπει να είναι πρωτότυπες και να μην έχουν υποβληθεί ή δημοσιευθεί σε άλλο συνέδριο ή περιοδικό. Όλες οι υποβολές θα ελεγχθούν με χρήση ειδικών λογισμικών ανίχνευσης ομοιοτήτων και λογοκλοπής και τυχόν περιπτώσεις υψηλής ομοιότητας θα διερευνηθούν περαιτέρω.';
+      if(ps[1]) ps[1].innerHTML = lang==='en'
+        ? 'Plagiarism and <strong>self-plagiarism</strong> (reproducing material from authors’ own previous publications without proper attribution) are strictly prohibited. Any reference to prior related work by the authors must be explicitly stated and the difference from the new submission clearly explained.'
+        : 'Η λογοκλοπή καθώς και η <strong style="color:var(--tx)">αυτολογοκλοπή</strong> (αναπαραγωγή υλικού από προηγούμενες δημοσιεύσεις των ίδιων συγγραφέων χωρίς ορθή αναφορά) απαγορεύονται ρητά. Οποιαδήποτε αναφορά σε σχετικό προηγούμενο έργο των συγγραφέων πρέπει να δηλώνεται ρητά και να εξηγείται με σαφήνεια η διαφορά της νέας υποβολής από αυτό.';
+    }
+  });
+
+  /* ── Registration steps ── */
+  const regStepTexts = document.querySelectorAll('.reg-step-text');
+  const regStepEl = [
+    ["Συμπληρώστε τη φόρμα δήλωσης","Ηλεκτρονική εγγραφή μέσω του συνδέσμου παρακάτω."],
+    ["Επιβεβαίωση συμμετοχής","Θα λάβετε email επιβεβαίωσης εντός 2 εργάσιμων ημερών."],
+    ["Ενημερώσεις & Πρόγραμμα","Θα ενημερώνεστε για το αναλυτικό πρόγραμμα και πρακτικές οδηγίες."],
+  ];
+  const regStepEn = [
+    ["Complete the registration form","Electronic registration via the link below."],
+    ["Registration confirmation","You will receive a confirmation email within 2 working days."],
+    ["Updates & Programme","You will be notified about the full programme and practical information."],
+  ];
+  regStepTexts.forEach((el,i) => {
+    const strong = el.querySelector('strong');
+    const texts = lang==='en' ? regStepEn[i] : regStepEl[i];
+    if(strong && texts){ strong.textContent = texts[0]; if(strong.nextSibling) strong.nextSibling.textContent = texts[1]; }
+  });
+
+  /* ── Registration CTA box ── */
+  const regCTABody = document.querySelector('.reg-cta-box p');
+  if(regCTABody) regCTABody.innerHTML = lang==='en'
+    ? 'Participation is open to educators, researchers, students and all interested parties.<br><br><strong style="color:var(--gl)">18–19 September 2026 · Patras</strong>'
+    : 'Η συμμετοχή στο Συνέδριο είναι ανοιχτή σε εκπαιδευτικούς, ερευνητές, φοιτητές και κάθε ενδιαφερόμενο.<br><br><strong style="color:var(--gl)">18–19 Σεπτεμβρίου 2026 · Πάτρα</strong>';
+
+  const regBtnEl = document.getElementById('reg-btn');
+  if(regBtnEl) regBtnEl.textContent = lang==='en' ? 'Registration Form →' : 'Φόρμα Δήλωσης Συμμετοχής →';
+
+  const regNoteEl = document.getElementById('reg-note');
+  if(regNoteEl && regNoteEl.textContent) regNoteEl.textContent = lang==='en'
+    ? '⏳ The form will be available soon.'
+    : '⏳ Η φόρμα θα είναι διαθέσιμη σύντομα.';
+
+  /* ── Announcements body ── */
+  const annSectionBody = document.querySelector('#announcements .section-body');
+  if(annSectionBody) annSectionBody.textContent = lang==='en'
+    ? 'Stay informed about the latest developments of the Conference.'
+    : 'Ενημερωθείτε για τις τελευταίες εξελίξεις του Συνεδρίου.';
+
+  /* ── Venue rows ── */
+  const vrLabels = document.querySelectorAll('.vr-label');
+  const vrEl = ['Χώρος','Ημερομηνίες','Διοργανωτές','Πρόσβαση'];
+  const vrEn = ['Venue','Dates','Organisers','Access'];
+  vrLabels.forEach((el,i) => { if(vrEl[i]) el.textContent = lang==='en' ? vrEn[i] : vrEl[i]; });
+
+  const vrVals = document.querySelectorAll('.vr-val');
+  if(vrVals[0]) vrVals[0].textContent = lang==='en' ? 'Conference Centre, University of Patras' : 'Συνεδριακό Κέντρο Πανεπιστημίου Πατρών';
+  if(vrVals[2]) vrVals[2].textContent = lang==='en' ? 'TEAEPH, University of Patras' : CONFIG.diorganotes1;
+
+  const vrSubs = document.querySelectorAll('.vr-sub');
+  if(vrSubs[0]) vrSubs[0].textContent = lang==='en' ? 'Patras, Achaia, Greece' : 'Πάτρα, Αχαΐα, Ελλάδα';
+  if(vrSubs[1]) vrSubs[1].textContent = lang==='en' ? 'Friday & Saturday' : 'Παρασκευή & Σάββατο';
+  if(vrSubs[2]) vrSubs[2].textContent = lang==='en' ? 'Directorate of Primary Education of Achaia' : CONFIG.diorganotes2;
+  if(vrSubs[3]) vrSubs[3].textContent = lang==='en' ? 'Transport & accommodation details coming soon.' : 'Λεπτομέρειες μεταφοράς & διαμονής σύντομα.';
+  if(vrVals[3]) vrVals[3].textContent = lang==='en' ? 'Patras' : 'Πάτρα';
+
+  /* ── Contact org ── */
+  const contOrg = document.getElementById('contact-org');
+  if(contOrg) contOrg.textContent = lang==='en'
+    ? 'TEAEPH, University of Patras & Directorate of Primary Education of Achaia'
+    : CONFIG.diorganotes1 + ' & ' + CONFIG.diorganotes2;
+
+  /* ── Sponsors section label ── */
+  const sponsorsLabel = document.querySelector('#contact [style*="text-align:center"][style*="uppercase"]');
+  if(sponsorsLabel && sponsorsLabel.textContent.includes('Φορείς')) sponsorsLabel.textContent = lang==='en' ? 'Organising Bodies' : 'Φορείς Διοργάνωσης';
+
+  /* ── Map link ── */
+  const mapLink = document.querySelector('.map-link');
+  if(mapLink) mapLink.textContent = lang==='en' ? '→ Open in Google Maps' : '→ Άνοιγμα σε Google Maps';
+
+  localStorage.setItem('lang', lang);
+}
+
+/* Restore language on load */
+const savedLang = localStorage.getItem('lang');
+if(savedLang && savedLang !== 'el') setTimeout(()=>setLang(savedLang), 100);
 /* ── TAB SWITCHING ───────────────────────────────────────────────────── */
 function switchTab(panelId, btn){
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
