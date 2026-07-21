@@ -248,6 +248,8 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
 .speaker-card{background:rgba(255,255,255,.05);border:1px solid rgba(29,158,117,.2);border-radius:12px;padding:24px 18px;text-align:center;transition:background .2s,border-color .2s}
 .speaker-card:hover{background:rgba(29,158,117,.1);border-color:rgba(29,158,117,.4)}
 .speaker-avatar{width:80px;height:80px;border-radius:50%;margin:0 auto 16px;background:rgba(29,158,117,.15);border:2px solid rgba(29,158,117,.3);display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--gl)}
+.speaker-avatar{overflow:hidden}
+.speaker-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .speaker-name{font-family:"GFS Didot",serif;font-size:1rem;color:#fff;margin-bottom:4px}
 .speaker-role{font-size:.75rem;color:var(--gl);margin-bottom:8px;font-weight:500}
 .speaker-topic{font-size:.78rem;color:rgba(225,245,238,.55);line-height:1.5}
@@ -522,7 +524,6 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
     <div class="hero-meta">
       <div class="hero-meta-item"><div class="meta-label">Ημερομηνία</div><div class="meta-value" id="meta-imeres"></div></div>
       <div class="hero-meta-item"><div class="meta-label">Χώρος</div><div class="meta-value">Πανεπιστήμιο Πατρών</div></div>
-      <div class="hero-meta-item"><div class="meta-label">Υποβολή έως</div><div class="meta-value meta-value-blink" id="meta-deadline"></div><div class="meta-new-badge">ΝΕΟ!</div></div>
       <div class="hero-meta-item"><div class="meta-label">Εγγραφή</div><div class="meta-value" id="meta-kostos"></div></div>
     </div>
 
@@ -629,6 +630,7 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
         <div class="cm-card"><div class="cm-name">Βελλοπούλου Αγγελική</div><div class="cm-role">ΕΔΙΠ, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Γεωργιάδου Νίκη</div><div class="cm-role">Αναπληρώτρια Καθηγήτρια, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Γιάκη Σπυριδούλα</div><div class="cm-role">ΕΔΙΠ, Πανεπιστήμιο Πατρών</div></div>
+        <div class="cm-card"><div class="cm-name">Γιαννίκας Αθανάσιος (Δρ.)</div><div class="cm-role">Σύμβουλος Ινστιτούτου Εκπαιδευτικής Πολιτικής (ΙΕΠ)</div></div>
         <div class="cm-card"><div class="cm-name">Γιωτόπουλος Κωνσταντίνος</div><div class="cm-role">Αναπληρωτής Καθηγητής, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Δουργούνας Γεώργιος (Δρ.)</div><div class="cm-role">ΜΟΔΙΠ, Πανεπιστήμιο Πελοποννήσου</div></div>
         <div class="cm-card"><div class="cm-name">Ζάγκος Γεώργιος</div><div class="cm-role">Σύμβουλος Εκπαίδευσης 2ης θέσης Δασκάλων Αχαΐας</div></div>
@@ -662,6 +664,7 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
     <div id="cm-organizing" class="cm-panel reveal">
       <div class="committee-grid">
         <div class="cm-card"><div class="cm-name">Αλεξόπουλος Χαράλαμπος</div><div class="cm-role">Σύμβουλος Εκπαίδευσης 5ης θέσης Δασκάλων Αχαΐας</div></div>
+        <div class="cm-card"><div class="cm-name">Αναστασίου Σοφία</div><div class="cm-role">Κοσμήτορας Σχολής Κοινωνικών Επιστημών, Πανεπιστήμιο Ιωαννίνων</div></div>
         <div class="cm-card"><div class="cm-name">Αραβαντινός Σπυρίδων</div><div class="cm-role">Υπ. διδάκτορας, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Αρβανίτη Ευγενία</div><div class="cm-role">Καθηγήτρια–Πρόεδρος ΤΕΕΑΠΗ, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Ασημακοπούλου Σοφία</div><div class="cm-role">Σύμβουλος Ειδικής Αγωγής &amp; Ενταξιακής Εκπαίδευσης</div></div>
@@ -669,6 +672,8 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
         <div class="cm-card"><div class="cm-name">Γιάκη Σπυριδούλα</div><div class="cm-role">ΕΔΙΠ, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Γκολώνη Βασιλική</div><div class="cm-role">Προϊσταμένη Εκπαιδευτικών Θεμάτων ΔΠΕ Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Ζάγκος Γεώργιος</div><div class="cm-role">Σύμβουλος Εκπαίδευσης 2ης θέσης Δασκάλων Αχαΐας</div></div>
+        <div class="cm-card"><div class="cm-name">Ζαχαροπούλου Αθανασία</div><div class="cm-role">Εκπαιδευτικός ΠΕ70</div></div>
+        <div class="cm-card"><div class="cm-name">Κακκαβάς Κωνσταντίνος</div><div class="cm-role">Διευθυντής ΔΣ Ροϊτίκων</div></div>
         <div class="cm-card"><div class="cm-name">Κλάδης Νικόλαος</div><div class="cm-role">Διευθυντής Πρωτοβάθμιας Εκπαίδευσης Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Μαλαπέτσα Ιωάννα</div><div class="cm-role">Εκπαιδευτικός ΠΕ70, Υπάλληλος ΔΠΕ Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Μαντζουράτου Βασιλική</div><div class="cm-role">Υπεύθυνη Πολιτιστικών Θεμάτων ΔΠΕ Αχαΐας</div></div>
@@ -677,6 +682,7 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
         <div class="cm-card"><div class="cm-name">Μπαρτζάκλη Μαριάννα</div><div class="cm-role">Σύμβουλος Εκπαίδευσης 6ης θέσης Δασκάλων Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Μπέστιας Γιώργος (Δρ.)</div><div class="cm-role">Εργαστήριο Κοινωνιολογίας και Εκπαίδευσης, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Νικολακοπούλου Κατερίνα</div><div class="cm-role">Επόπτρια Ποιότητας Εκπαίδευσης ΔΠΕ Αχαΐας</div></div>
+        <div class="cm-card"><div class="cm-name">Ντζίφα Αγγελική</div><div class="cm-role">Διευθύντρια 1ου ΔΣ Κάτω Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Παπαδοπούλου Ελένη</div><div class="cm-role">Εκπαιδευτικός ΠΕ79, Υπάλληλος ΔΠΕ Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Παπαδούρης Παναγιώτης</div><div class="cm-role">Σύμβουλος Εκπαίδευσης 4ης θέσης Δασκάλων Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Παπακωνσταντινοπούλου Άρτεμις</div><div class="cm-role">Υπεύθυνη Αγωγής Υγείας ΔΠΕ Αχαΐας</div></div>
@@ -715,32 +721,28 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
     <div id="tab-speakers" class="tab-panel active reveal">
       <div class="speakers-grid">
         <div class="speaker-card">
-          <div class="speaker-avatar">👤</div>
-          <div class="speaker-name">Προσκεκλημένος Ομιλητής</div>
-          <div class="speaker-role">Θα ανακοινωθεί</div>
-          <div class="speaker-topic">Θέμα ομιλίας υπό επιβεβαίωση</div>
-          <span class="speaker-coming">Σύντομα</span>
+          <div class="speaker-avatar"><img src="images/speakers/kalantzis.jpg" alt="Mary Kalantzis" onerror="this.remove();this.parentNode.textContent='MK'"></div>
+          <div class="speaker-name">Mary Kalantzis</div>
+          <div class="speaker-role">Professor, University of Illinois Urbana-Champaign, USA</div>
+          <div class="speaker-topic">Πρώην Κοσμήτορας του College of Education (2006–2016). Κορυφαία διεθνώς στις νέες σπουδές γραμματισμού, συνδημιουργός της παιδαγωγικής των πολυγραμματισμών, με πρόσφατη έρευνα στη γενετική ΤΝ και την εκπαίδευση.</div>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar">👤</div>
-          <div class="speaker-name">Προσκεκλημένος Ομιλητής</div>
-          <div class="speaker-role">Θα ανακοινωθεί</div>
-          <div class="speaker-topic">Θέμα ομιλίας υπό επιβεβαίωση</div>
-          <span class="speaker-coming">Σύντομα</span>
+          <div class="speaker-avatar"><img src="images/speakers/cope.jpg" alt="William Cope" onerror="this.remove();this.parentNode.textContent='WC'"></div>
+          <div class="speaker-name">William Cope</div>
+          <div class="speaker-role">Professor, University of Illinois Urbana-Champaign, USA</div>
+          <div class="speaker-topic">Επικεφαλής ερευνητής μεγάλων έργων εκπαιδευτικής τεχνολογίας (US Dept. of Education, Gates Foundation, NSF). Συν-συγγραφέας των «New Learning», «Literacies» και «A Pedagogy of Multiliteracies».</div>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar">👤</div>
-          <div class="speaker-name">Προσκεκλημένος Ομιλητής</div>
-          <div class="speaker-role">Θα ανακοινωθεί</div>
-          <div class="speaker-topic">Θέμα ομιλίας υπό επιβεβαίωση</div>
-          <span class="speaker-coming">Σύντομα</span>
+          <div class="speaker-avatar"><img src="images/speakers/balias.jpg" alt="Στάθης Μπάλιας" onerror="this.remove();this.parentNode.textContent='ΣΜ'"></div>
+          <div class="speaker-name">Στάθης Μπάλιας</div>
+          <div class="speaker-role">Ομότιμος Καθηγητής, ΤΕΕΑΠΗ, Πανεπιστήμιο Πατρών</div>
+          <div class="speaker-topic">Πολιτικός επιστήμονας με μεταπτυχιακές σπουδές στη Γαλλία (Paris II). Τα ερευνητικά του ενδιαφέροντα εστιάζονται στη θεωρία της δημοκρατίας, τα ανθρώπινα δικαιώματα και τις σχέσεις εκπαίδευσης και δημοκρατίας.</div>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar">👤</div>
-          <div class="speaker-name">Προσκεκλημένος Ομιλητής</div>
-          <div class="speaker-role">Θα ανακοινωθεί</div>
-          <div class="speaker-topic">Θέμα ομιλίας υπό επιβεβαίωση</div>
-          <span class="speaker-coming">Σύντομα</span>
+          <div class="speaker-avatar"><img src="images/speakers/chatzigianni.jpg" alt="Μαρία Χατζηγιάννη" onerror="this.remove();this.parentNode.textContent='ΜΧ'"></div>
+          <div class="speaker-name">Μαρία Χατζηγιάννη</div>
+          <div class="speaker-role">Αναπληρώτρια Καθηγήτρια, Πανεπιστήμιο Δυτικής Αττικής</div>
+          <div class="speaker-topic">Τμήμα Αγωγής &amp; Φροντίδας στην Πρώιμη Παιδική Ηλικία. Η έρευνά της εστιάζει στις ψηφιακές τεχνολογίες στην πρώιμη παιδική και προσχολική ηλικία (0–8 ετών). Διδακτορικό από το Πανεπιστήμιο της Μελβούρνης, όπου κατέχει τιμητική θέση.</div>
         </div>
       </div>
     </div>
@@ -1084,7 +1086,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('hero-sub').textContent      = CONFIG.ypotitlos;
   document.getElementById('meta-imeres').textContent   = CONFIG.imeres;
-  document.getElementById('meta-deadline').textContent = CONFIG.deadline_ypovolis;
+  var _md = document.getElementById('meta-deadline'); if(_md) _md.textContent = CONFIG.deadline_ypovolis;
   document.getElementById('meta-kostos').textContent   = CONFIG.egrafes_kostos;
   document.getElementById('org1').textContent          = CONFIG.diorganotes1;
   document.getElementById('org2').textContent          = CONFIG.diorganotes2;
@@ -1484,8 +1486,8 @@ function setLang(lang){
 
   /* Hero meta labels */
   const metaItems = document.querySelectorAll('.hero-meta-item');
-  const metaLabelsEl = ['Ημερομηνία','Χώρος','Υποβολή έως','Εγγραφή'];
-  const metaLabelsEn = ['Date','Venue','Submission by','Registration'];
+  const metaLabelsEl = ['Ημερομηνία','Χώρος','Εγγραφή'];
+  const metaLabelsEn = ['Date','Venue','Registration'];
   metaItems.forEach((item, i) => {
     const lbl = item.querySelector('.meta-label');
     if(lbl) lbl.textContent = lang==='en' ? metaLabelsEn[i] : metaLabelsEl[i];
