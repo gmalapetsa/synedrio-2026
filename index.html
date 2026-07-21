@@ -31,6 +31,7 @@ const CONFIG = {
   /* --- ΗΜΕΡΟΜΗΝΙΕΣ --- */
   deadline_ypovolis:    "6 Ιουλίου 2026",
   deadline_iso:         "2026-07-06T23:59:59",
+  synedrio_iso:         "2026-09-18T16:30:00",
   deadline_axiologisis: "ΥΠΟ ΑΝΑΚΟΙΝΩΣΗ",   // ← αλλάξτε όταν οριστεί
 
   /* --- ΕΓΓΡΑΦΕΣ --- */
@@ -529,7 +530,7 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
 
     <!-- COUNTDOWN -->
     <div class="countdown-bar">
-      <div class="countdown-label">Αντίστροφη μέτρηση για υποβολή εργασιών</div>
+      <div class="countdown-label">Αντίστροφη μέτρηση για την έναρξη του Συνεδρίου</div>
       <div class="countdown-digits">
         <div class="cd-box"><div class="cd-num" id="cd-days">--</div><div class="cd-unit">Μέρες</div></div>
         <div class="cd-box"><div class="cd-num" id="cd-hours">--</div><div class="cd-unit">Ώρες</div></div>
@@ -540,7 +541,6 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
 
     <div class="hero-btns">
       <a href="#registration" class="btn-green">Δήλωση Συμμετοχής — Δωρεάν</a>
-      <a href="#submissions" class="btn-outline-w">Υποβολή Εργασίας</a>
     </div>
   </div>
   <div class="scroll-hint">↓</div>
@@ -721,25 +721,25 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
     <div id="tab-speakers" class="tab-panel active reveal">
       <div class="speakers-grid">
         <div class="speaker-card">
-          <div class="speaker-avatar"><img src="images/speakers/kalantzis.jpg" alt="Mary Kalantzis" onerror="this.remove();this.parentNode.textContent='MK'"></div>
+          <div class="speaker-avatar"><img data-base="images/speakers/kalantzis" data-try="0" src="images/speakers/kalantzis.jpg" alt="Mary Kalantzis" onerror="spImgFallback(this,'MK')"></div>
           <div class="speaker-name">Mary Kalantzis</div>
           <div class="speaker-role">Professor, University of Illinois Urbana-Champaign, USA</div>
           <div class="speaker-topic">Πρώην Κοσμήτορας του College of Education (2006–2016). Κορυφαία διεθνώς στις νέες σπουδές γραμματισμού, συνδημιουργός της παιδαγωγικής των πολυγραμματισμών, με πρόσφατη έρευνα στη γενετική ΤΝ και την εκπαίδευση.</div>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar"><img src="images/speakers/cope.jpg" alt="William Cope" onerror="this.remove();this.parentNode.textContent='WC'"></div>
+          <div class="speaker-avatar"><img data-base="images/speakers/cope" data-try="0" src="images/speakers/cope.jpg" alt="William Cope" onerror="spImgFallback(this,'WC')"></div>
           <div class="speaker-name">William Cope</div>
           <div class="speaker-role">Professor, University of Illinois Urbana-Champaign, USA</div>
           <div class="speaker-topic">Επικεφαλής ερευνητής μεγάλων έργων εκπαιδευτικής τεχνολογίας (US Dept. of Education, Gates Foundation, NSF). Συν-συγγραφέας των «New Learning», «Literacies» και «A Pedagogy of Multiliteracies».</div>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar"><img src="images/speakers/balias.jpg" alt="Στάθης Μπάλιας" onerror="this.remove();this.parentNode.textContent='ΣΜ'"></div>
+          <div class="speaker-avatar"><img data-base="images/speakers/balias" data-try="0" src="images/speakers/balias.jpg" alt="Στάθης Μπάλιας" onerror="spImgFallback(this,'ΣΜ')"></div>
           <div class="speaker-name">Στάθης Μπάλιας</div>
           <div class="speaker-role">Ομότιμος Καθηγητής, ΤΕΕΑΠΗ, Πανεπιστήμιο Πατρών</div>
           <div class="speaker-topic">Πολιτικός επιστήμονας με μεταπτυχιακές σπουδές στη Γαλλία (Paris II). Τα ερευνητικά του ενδιαφέροντα εστιάζονται στη θεωρία της δημοκρατίας, τα ανθρώπινα δικαιώματα και τις σχέσεις εκπαίδευσης και δημοκρατίας.</div>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar"><img src="images/speakers/chatzigianni.jpg" alt="Μαρία Χατζηγιάννη" onerror="this.remove();this.parentNode.textContent='ΜΧ'"></div>
+          <div class="speaker-avatar"><img data-base="images/speakers/chatzigianni" data-try="0" src="images/speakers/chatzigianni.jpg" alt="Μαρία Χατζηγιάννη" onerror="spImgFallback(this,'ΜΧ')"></div>
           <div class="speaker-name">Μαρία Χατζηγιάννη</div>
           <div class="speaker-role">Αναπληρώτρια Καθηγήτρια, Πανεπιστήμιο Δυτικής Αττικής</div>
           <div class="speaker-topic">Τμήμα Αγωγής &amp; Φροντίδας στην Πρώιμη Παιδική Ηλικία. Η έρευνά της εστιάζει στις ψηφιακές τεχνολογίες στην πρώιμη παιδική και προσχολική ηλικία (0–8 ετών). Διδακτορικό από το Πανεπιστήμιο της Μελβούρνης, όπου κατέχει τιμητική θέση.</div>
@@ -1161,8 +1161,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ── COUNTDOWN ───────────────────────────────────────────────────────── */
+
+/* Speaker photo loader: tries alternative extensions before showing initials */
+const SP_EXTS = ['.jpg','.jpeg','.png','.JPG','.JPEG','.PNG','.webp'];
+function spImgFallback(img, initials){
+  let i = parseInt(img.dataset.try || '0', 10) + 1;
+  if(i < SP_EXTS.length){
+    img.dataset.try = i;
+    img.src = img.dataset.base + SP_EXTS[i];
+  } else {
+    const p = img.parentNode;
+    img.remove();
+    p.textContent = initials;
+  }
+}
+
 function startCountdown() {
-  const target = new Date(CONFIG.deadline_iso);
+  const target = new Date(CONFIG.synedrio_iso);
   if (isNaN(target.getTime())) return;
 
   function tick(){
@@ -1279,7 +1294,7 @@ const EN = {
   'meta-label-reg':     'Registration',
   'hero-btn1': 'Register — Free',
   'hero-btn2': 'Submit Paper',
-  'cd-label':  'Countdown to submission deadline',
+  'cd-label':  'Countdown to the Conference opening',
   'cd-days':   'Days', 'cd-hours': 'Hours', 'cd-mins': 'Minutes', 'cd-secs': 'Sec.',
   /* ABOUT */
   'about-tag':   'Purpose & Goals',
@@ -1335,13 +1350,11 @@ function setLang(lang){
         : CONFIG.titlos);
 
   const heroBtn1 = document.querySelector('.hero-btns a:first-child');
-  const heroBtn2 = document.querySelector('.hero-btns a:last-child');
   if(heroBtn1) heroBtn1.textContent = lang==='en' ? 'Register — Free' : 'Δήλωση Συμμετοχής — Δωρεάν';
-  if(heroBtn2) heroBtn2.textContent = lang==='en' ? 'Submit Paper' : 'Υποβολή Εργασίας';
 
   /* countdown label */
   const cdLabel = document.querySelector('.countdown-label');
-  if(cdLabel) cdLabel.textContent = lang==='en' ? 'Countdown to submission deadline' : 'Αντίστροφη μέτρηση για υποβολή εργασιών';
+  if(cdLabel) cdLabel.textContent = lang==='en' ? 'Countdown to the Conference opening' : 'Αντίστροφη μέτρηση για την έναρξη του Συνεδρίου';
 
   /* section tags & titles — map by section id */
   const sectionMap = {
