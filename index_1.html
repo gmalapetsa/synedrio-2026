@@ -374,6 +374,7 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
 .prog-rooms{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .prog-room{background:var(--off);border:1px solid var(--br);border-radius:10px;padding:18px 20px}
 .prog-room-name{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g);margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--br)}
+.prog-room-theme{font-size:.72rem;color:var(--mu);font-style:italic;margin:-4px 0 12px;line-height:1.4}
 .prog-talk{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--br)}
 .prog-talk:last-child{border-bottom:none}
 .prog-talk-time{min-width:76px;flex-shrink:0;font-size:.74rem;font-weight:700;color:var(--gd);padding-top:1px}
@@ -708,10 +709,13 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
       <div class="committee-grid">
         <div class="cm-card"><div class="cm-name">Αλεξόπουλος Χαράλαμπος</div><div class="cm-role">Σύμβουλος Εκπαίδευσης 5ης θέσης Δασκάλων Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Αναστασίου Σοφία</div><div class="cm-role">Κοσμήτορας Σχολής Κοινωνικών Επιστημών, Πανεπιστήμιο Ιωαννίνων</div></div>
+        <div class="cm-card"><div class="cm-name">Αντωνακοπούλου Ελένη</div><div class="cm-role">Υπεύθυνη Αγωγής Υγείας ΔΠΕ Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Αραβαντινός Σπυρίδων</div><div class="cm-role">Υπ. διδάκτορας, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Αρβανίτη Ευγενία</div><div class="cm-role">Καθηγήτρια–Πρόεδρος ΤΕΕΑΠΗ, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Ασημακοπούλου Σοφία</div><div class="cm-role">Σύμβουλος Ειδικής Αγωγής &amp; Ενταξιακής Εκπαίδευσης</div></div>
         <div class="cm-card"><div class="cm-name">Βασιλείου Κλεοπάτρα</div><div class="cm-role">Διευθύντρια Πρωτοβάθμιας Εκπαίδευσης Άρτας</div></div>
+        <div class="cm-card"><div class="cm-name">Βλάχου Όλγα</div><div class="cm-role">Διευθύντρια 13ου ΔΣ Πατρών</div></div>
+        <div class="cm-card"><div class="cm-name">Βόβος Ανέστης</div><div class="cm-role">Διευθυντής 3ου ΔΣ Αιγίου</div></div>
         <div class="cm-card"><div class="cm-name">Γιάκη Σπυριδούλα</div><div class="cm-role">ΕΔΙΠ, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Γκολώνη Βασιλική</div><div class="cm-role">Προϊσταμένη Εκπαιδευτικών Θεμάτων ΔΠΕ Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Ζάγκος Γεώργιος</div><div class="cm-role">Σύμβουλος Εκπαίδευσης 2ης θέσης Δασκάλων Αχαΐας</div></div>
@@ -732,6 +736,7 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
         <div class="cm-card"><div class="cm-name">Πούλου Μαρία</div><div class="cm-role">Καθηγήτρια, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Ρηγάλου Χάρις</div><div class="cm-role">Υπ. διδάκτορας, Πανεπιστήμιο Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Σακκάτου Ασπασία</div><div class="cm-role">Εκπαιδευτικός ΠΕ70, Υπάλληλος ΔΠΕ Αχαΐας</div></div>
+        <div class="cm-card"><div class="cm-name">Σακκούλης Δημήτριος</div><div class="cm-role">Διευθυντής 49ου ΔΣ Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Στεφανόπουλος Κωνσταντίνος</div><div class="cm-role">Διοικητικός Υπάλληλος ΔΠΕ Αχαΐας</div></div>
         <div class="cm-card"><div class="cm-name">Τσιλιγκιριάν Ερμιόνη</div><div class="cm-role">Διευθύντρια 45ου ΔΣ Πατρών</div></div>
         <div class="cm-card"><div class="cm-name">Τσίρμπα Χρυσούλα</div><div class="cm-role">Σύμβουλος Εκπαίδευσης 1ης θέσης Νηπιαγωγών Αχαΐας</div></div>
@@ -802,10 +807,10 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
             </div>
           </div>
           <div class="program-slot"><div class="slot-time">16:30–17:00</div><div class="slot-content"><div class="slot-title">Προσέλευση – Εγγραφές</div></div></div>
-            <div class="program-slot"><div class="slot-time">17:00–17:30</div><div class="slot-content"><div class="slot-title">Χαιρετισμοί</div><div class="slot-sub">Ε. Αρβανίτη (Πρόεδρος ΤΕΕΑΠΗ) · Ν. Κλάδης (Δ/ντής Εκπ/σης Π.Ε. Αχαΐας)</div></div></div>
-            <div class="program-slot"><div class="slot-time">17:30–18:10</div><div class="slot-content"><div class="slot-title">Κεντρικές Ομιλίες</div><div class="slot-sub">M. Kalantzis &amp; W. Cope, University of Illinois</div></div></div>
-            <div class="program-slot"><div class="slot-time">18:10–18:40</div><div class="slot-content"><div class="slot-title">Διάλειμμα</div></div></div>
-            <div class="program-slot"><div class="slot-time">18:40–19:55</div><div class="slot-content"><div class="slot-title">Παράλληλες Συνεδρίες</div><div class="slot-sub">10 εισηγήσεις σε 2 αίθουσες (Ι-10, Ι-11) — δείτε αναλυτικά παρακάτω</div></div></div>
+            <div class="program-slot"><div class="slot-time">17:00–17:30</div><div class="slot-content"><div class="slot-title">Χαιρετισμοί</div></div></div>
+            <div class="program-slot"><div class="slot-time">17:30–18:15</div><div class="slot-content"><div class="slot-title">Κεντρικοί Ομιλητές</div><div class="slot-sub">M. Kalantzis &amp; W. Cope, University of Illinois</div></div></div>
+            <div class="program-slot"><div class="slot-time">18:15–18:30</div><div class="slot-content"><div class="slot-title">Διάλειμμα</div></div></div>
+            <div class="program-slot"><div class="slot-time">18:30–19:45</div><div class="slot-content"><div class="slot-title">Παράλληλες Συνεδρίες</div><div class="slot-sub">10 εισηγήσεις σε 2 αίθουσες (Ι-10, Ι-11) — δείτε αναλυτικά παρακάτω</div></div></div>
             <div class="program-slot"><div class="slot-time">20:00–21:00</div><div class="slot-content"><div class="slot-title">Στρογγυλή Τράπεζα &amp; Κλείσιμο</div><div class="slot-sub">«Ψηφιακή ισότητα ή ψηφιακό χάσμα;» — Αμφιθέατρο Ι-4</div></div></div>
         </div>
         <div class="program-day">
@@ -817,12 +822,15 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
             </div>
           </div>
           <div class="program-slot"><div class="slot-time">09:30–10:00</div><div class="slot-content"><div class="slot-title">Προσέλευση – Εγγραφές</div></div></div>
-            <div class="program-slot"><div class="slot-time">10:00–12:00</div><div class="slot-content"><div class="slot-title">Παράλληλες Συνεδρίες</div><div class="slot-sub">16 εισηγήσεις σε 2 αίθουσες (Ι-10, Ι-11) — δείτε αναλυτικά παρακάτω</div></div></div>
-            <div class="program-slot"><div class="slot-time">12:00–12:30</div><div class="slot-content"><div class="slot-title">Διάλειμμα</div></div></div>
-            <div class="program-slot"><div class="slot-time">12:30–13:30</div><div class="slot-content"><div class="slot-title">Παράλληλες Συνεδρίες</div><div class="slot-sub">8 εισηγήσεις σε 2 αίθουσες (Ι-10, Ι-11)</div></div></div>
+            <div class="program-slot"><div class="slot-time">10:00–11:30</div><div class="slot-content"><div class="slot-title">Α΄ Παράλληλες Συνεδρίες</div><div class="slot-sub">12 εισηγήσεις σε 2 αίθουσες (Ι-10, Ι-11) — δείτε αναλυτικά παρακάτω</div></div></div>
+            <div class="program-slot"><div class="slot-time">11:30–11:45</div><div class="slot-content"><div class="slot-title">Διάλειμμα</div></div></div>
+            <div class="program-slot"><div class="slot-time">11:45–13:15</div><div class="slot-content"><div class="slot-title">Β΄ Παράλληλες Συνεδρίες</div><div class="slot-sub">12 εισηγήσεις σε 2 αίθουσες (Ι-10, Ι-11)</div></div></div>
+            <div class="program-slot"><div class="slot-time">13:15–13:30</div><div class="slot-content"><div class="slot-title">Διάλειμμα</div></div></div>
             <div class="program-slot"><div class="slot-time">13:30–14:15</div><div class="slot-content"><div class="slot-title">Κεντρικές Ομιλίες</div><div class="slot-sub">Σ. Μπάλιας (Παν. Πατρών) · Μ. Χατζηγιάννη (Παν. Δυτ. Αττικής)</div></div></div>
-            <div class="program-slot"><div class="slot-time">14:15–15:00</div><div class="slot-content"><div class="slot-title">Διάλειμμα</div></div></div>
-            <div class="program-slot"><div class="slot-time">15:00–17:30</div><div class="slot-content"><div class="slot-title">Παράλληλες Συνεδρίες &amp; Κλείσιμο</div><div class="slot-sub">20 εισηγήσεις σε 2 αίθουσες (Ι-10, Ι-11)</div></div></div>
+            <div class="program-slot"><div class="slot-time">14:15–14:45</div><div class="slot-content"><div class="slot-title">Διάλειμμα &amp; Ε-poster</div></div></div>
+            <div class="program-slot"><div class="slot-time">14:45–16:00</div><div class="slot-content"><div class="slot-title">Γ΄ Παράλληλες Συνεδρίες</div><div class="slot-sub">10 εισηγήσεις σε 2 αίθουσες (Ι-10, Ι-11)</div></div></div>
+            <div class="program-slot"><div class="slot-time">16:00–16:15</div><div class="slot-content"><div class="slot-title">Διάλειμμα</div></div></div>
+            <div class="program-slot"><div class="slot-time">16:15–17:30</div><div class="slot-content"><div class="slot-title">Δ΄ Παράλληλες Συνεδρίες &amp; Κλείσιμο</div><div class="slot-sub">7 εισηγήσεις σε 2 αίθουσες (Ι-10, Ι-11)</div></div></div>
         </div>
       </div>
       <div class="program-notice" style="text-align:left">
@@ -869,35 +877,36 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
     <div id="prog-day1" class="prog-panel active reveal">
       <div class="prog-plenary">
         <div class="prog-p-item"><div class="prog-p-time">16:30–17:00</div><div class="prog-p-text">Προσέλευση – Εγγραφές</div></div>
-        <div class="prog-p-item"><div class="prog-p-time">17:00–17:30</div><div class="prog-p-text">Χαιρετισμοί<small>Δρ Ε. Αρβανίτη, Καθηγήτρια, Πρόεδρος ΤΕΕΑΠΗ Πανεπιστημίου Πατρών · Δρ Ν. Κλάδης, Διευθυντής Εκπ/σης Π.Ε. Αχαΐας</small></div></div>
-        <div class="prog-p-item"><div class="prog-p-time">17:30–17:50</div><div class="prog-p-text">Κεντρική Ομιλία<small>Professor Mary Kalantzis, University of Illinois, USA</small></div></div>
-        <div class="prog-p-item"><div class="prog-p-time">17:50–18:10</div><div class="prog-p-text">Κεντρική Ομιλία<small>Professor William Cope, University of Illinois, USA</small></div></div>
-        <div class="prog-p-item"><div class="prog-p-time">18:10–18:40</div><div class="prog-p-text">Διάλειμμα</div></div>
+        <div class="prog-p-item"><div class="prog-p-time">17:00–17:30</div><div class="prog-p-text">Χαιρετισμοί</div></div>
+        <div class="prog-p-item"><div class="prog-p-time">17:30–18:15</div><div class="prog-p-text">Κεντρικοί Ομιλητές<small>Professor Mary Kalantzis, University of Illinois, USA — «The nature and challenge of artificial intelligence for education»</small><small>Professor William Cope, University of Illinois, USA — «Artificial intelligence in educational practice»</small><small>Προεδρείο: Δρ. Αρβανίτη Ευγενία, Καθηγήτρια, Πρόεδρος ΤΕΕΑΠΗ Πανεπιστημίου Πατρών · Δρ. Κλάδης Νικόλαος, Διευθυντής Π.Ε. Αχαΐας</small></div></div>
+        <div class="prog-p-item"><div class="prog-p-time">18:15–18:30</div><div class="prog-p-text">Διάλειμμα</div></div>
       </div>
       <div class="prog-parallel">
-        <span class="prog-parallel-time">🕐 18:40–19:55 · Παράλληλες Συνεδρίες</span>
-        <div class="prog-parallel-note">Αμφιθέατρο Ι-10 &amp; Ι-11 · εισηγήσεις 15΄</div>
+        <span class="prog-parallel-time">🕐 18:30–19:45 · Παράλληλες Συνεδρίες</span>
+        <div class="prog-parallel-note">Αίθουσες Ι-10 &amp; Ι-11 · εισηγήσεις 15΄</div>
         <div class="prog-rooms">
         <div class="prog-room">
           <div class="prog-room-name">Αίθουσα Ι-10</div>
-          <div class="prog-talk"><div class="prog-talk-time">18:40–18:55</div><div class="prog-talk-text"><strong>Δρ. Ντόκα Α.</strong> — Η ενσωμάτωση της αξιολόγησης στη διδασκαλία μέσω Τεχνητής Νοημοσύνης: Σύγχρονες προσεγγίσεις και εκπαιδευτικές εφαρμογές</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">18:55–19:10</div><div class="prog-talk-text"><strong>Παπαγεωργάκη Ζ.</strong> — Από τις παροιμίες στην Τεχνητή Νοημοσύνη: Ανάπτυξη γλωσσικού, πολυτροπικού και AI γραμματισμού μέσω κινητικών παιχνιδιών στη Φυσική Αγωγή στο Δημοτικό Σχολείο</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">19:10–19:25</div><div class="prog-talk-text"><strong>Κακαβάς Κ. - Kλούρα Ν.</strong> — Από τον Παθητικό Καταναλωτή στον Συνειδητό Δημιουργό: Καλλιεργώντας τον Γραμματισμό στην Τεχνητή Νοημοσύνη (AI Literacy) σε μαθητές Ε΄ Δημοτικού</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">19:25–19:40</div><div class="prog-talk-text"><strong>Ζαχαροπούλου Α.</strong> — Ο γραμματισμός στην Τεχνητή Νοημοσύνη ως εξέλιξη του ψηφιακού γραμματισμού: Προς ένα παιδαγωγικό πλαίσιο για την Πρωτοβάθμια Εκπαίδευση</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">19:40–19:55</div><div class="prog-talk-text"><strong>Λεβεντάκου Μ. – Μυλωνάς Κ.</strong> — Αφήγηση ιστοριών μέσα από τη σιωπή: Διδακτική αξιοποίηση του σιωπηλού βιβλίου Το Κόκκινο Βιβλίο και ανάπτυξη γραμματισμού στην Τεχνητή Νοημοσύνη στο Νηπιαγωγείο</div></div>
+          <div class="prog-room-theme">Τεχνητή Νοημοσύνη, Γραμματισμοί και Εκπαιδευτικές Πρακτικές</div>
+          <div class="prog-talk"><div class="prog-talk-time">18:30–18:45</div><div class="prog-talk-text"><strong>Ντόκα Α.</strong> — «Η ενσωμάτωση της αξιολόγησης στη διδασκαλία μέσω Τεχνητής Νοημοσύνης: Σύγχρονες προσεγγίσεις και εκπαιδευτικές εφαρμογές»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">18:45–19:00</div><div class="prog-talk-text"><strong>Παπαγεωργάκη Ζ.</strong> — «Από τις παροιμίες στην Τεχνητή Νοημοσύνη: Ανάπτυξη γλωσσικού, πολυτροπικού και AI γραμματισμού μέσω κινητικών παιχνιδιών στη Φυσική Αγωγή στο Δημοτικό Σχολείο»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">19:00–19:15</div><div class="prog-talk-text"><strong>Κακαβάς Κ. - Kλούρα Ν.</strong> — «Από τον Παθητικό Καταναλωτή στον Συνειδητό Δημιουργό: Καλλιεργώντας τον Γραμματισμό στην Τεχνητή Νοημοσύνη (AI Literacy) σε μαθητές Ε΄ Δημοτικού»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">19:15–19:30</div><div class="prog-talk-text"><strong>Ζαχαροπούλου Α.</strong> — «Ο γραμματισμός στην Τεχνητή Νοημοσύνη ως εξέλιξη του ψηφιακού γραμματισμού: Προς ένα παιδαγωγικό πλαίσιο για την Πρωτοβάθμια Εκπαίδευση»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">19:30–19:45</div><div class="prog-talk-text"><strong>Λεβεντάκου Μ. – Μυλωνάς Κ.</strong> — «Αφήγηση ιστοριών μέσα από τη σιωπή: Διδακτική αξιοποίηση του σιωπηλού βιβλίου Το Κόκκινο Βιβλίο και ανάπτυξη γραμματισμού στην Τεχνητή Νοημοσύνη στο Νηπιαγωγείο»</div></div>
         </div>
         <div class="prog-room">
           <div class="prog-room-name">Αίθουσα Ι-11</div>
-          <div class="prog-talk"><div class="prog-talk-time">18:40–18:55</div><div class="prog-talk-text"><strong>Κουζούλη Σ.</strong> — Πολυγραμματισμοί και Τεχνητή Νοημοσύνη στη διδασκαλία της Αγγλικής Γλώσσας</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">18:55–19:10</div><div class="prog-talk-text"><strong>Καπατσούλια Χ.</strong> — Καλλιεργώντας δεξιότητες γραμματισμού στην Πληροφορία ως Θεμέλιο Κατανόησης της Τεχνητής Νοημοσύνης στο Νηπιαγωγείο</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">19:10–19:25</div><div class="prog-talk-text"><strong>Γεωργίου Α. – Πεσματζόγλου Ε.</strong> — Η αξιοποίηση εργαλείων Τεχνητής Νοημοσύνης στον σχεδιασμό διαφοροποιημένων και συμπεριληπτικών μαθησιακών εμπειριών στην Α΄ Δημοτικού: Μελέτη περίπτωσης τριών εκπαιδευτικών παρεμβάσεων</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">19:25–19:40</div><div class="prog-talk-text"><strong>Μεταξοπούλου – Λίκερτ Ι.</strong> — Διαφοροποιημένη διδασκαλία και ψηφιακοί- πολυτροπικοί γραμματισμοί</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">19:40–19:55</div><div class="prog-talk-text"><strong>Σαργιώτη Ρ. – Μανώλη Π.</strong> — Παραγωγική τεχνητή νοημοσύνη και πολυγλωσσική προσχολική εκπαίδευση: Παιδαγωγικές αρχές και αξιοποίηση του ChatGPT</div></div>
+          <div class="prog-room-theme">Τεχνητή Νοημοσύνη, Συμπερίληψη και Πολυγραμματισμοί</div>
+          <div class="prog-talk"><div class="prog-talk-time">18:30–18:45</div><div class="prog-talk-text"><strong>Κουζούλη Σ.</strong> — «Πολυγραμματισμοί και Τεχνητή Νοημοσύνη στη διδασκαλία της Αγγλικής Γλώσσας»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">18:45–19:00</div><div class="prog-talk-text"><strong>Γεωργίου Α. – Πεσματζόγλου Ε.</strong> — «Η αξιοποίηση εργαλείων Τεχνητής Νοημοσύνης στον σχεδιασμό διαφοροποιημένων και συμπεριληπτικών μαθησιακών εμπειριών στην Α΄ Δημοτικού: Μελέτη περίπτωσης τριών εκπαιδευτικών παρεμβάσεων»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">19:00–19:15</div><div class="prog-talk-text"><strong>Κανελλάκη Γκ. – Τσιλιβίτα Κ.</strong> — «Η αξιοποίηση των ψηφιακών εργαλείων και της τεχνητής νοημοσύνης στην τάξη του Νηπιαγωγείου μέσα από ενδεικτικά παραδείγματα εφαρμογής»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">19:15–19:30</div><div class="prog-talk-text"><strong>Μεταξοπούλου – Λίκερτ Ι.</strong> — «Διαφοροποιημένη διδασκαλία και ψηφιακοί- πολυτροπικοί γραμματισμοί»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">19:30–19:45</div><div class="prog-talk-text"><strong>Σαργιώτη Ρ. – Μανώλη Π.</strong> — «Παραγωγική τεχνητή νοημοσύνη και πολυγλωσσική προσχολική εκπαίδευση: Παιδαγωγικές αρχές και αξιοποίηση του ChatGPT»</div></div>
         </div>
         </div>
       </div>
       <div class="prog-plenary">
-        <div class="prog-p-item"><div class="prog-p-time">20:00–21:00</div><div class="prog-p-text">Στρογγυλή Τράπεζα &amp; Κλείσιμο<small>«Ψηφιακή ισότητα ή ψηφιακό χάσμα; Η Τεχνητή Νοημοσύνη ως ευκαιρία ή/και ως απειλή για την Πρωτοβάθμια Εκπαίδευση» — Αμφιθέατρο Ι-4</small></div></div>
+        <div class="prog-p-item"><div class="prog-p-time">20:00–21:00</div><div class="prog-p-text">Στρογγυλή Τράπεζα &amp; Κλείσιμο<small>«Ψηφιακή ισότητα ή ψηφιακό χάσμα; Η Τεχνητή Νοημοσύνη ως ευκαιρία ή/και ως απειλή για την Πρωτοβάθμια Εκπαίδευση» — Αμφιθέατρο Ι-4</small><small>Δρ. Μπαλωμένου Αθανασία, Περιφερειακή Επόπτρια Ποιότητας της Εκπαίδευσης Δυτικής Ελλάδος</small><small>Δρ. Νικολακοπούλου Αικατερίνη, Επόπτρια Ποιότητας της Πρωτοβάθμιας Εκπαίδευσης Αχαΐας</small><small>Δρ. Ντόκα Αγλαΐα, Επόπτρια Ποιότητας της Πρωτοβάθμιας Εκπαίδευσης Άρτας</small><small>Γκολώνη Βασιλική, Υποψήφια Διδάκτωρ Πανεπιστημίου Ιωαννίνων, Προϊσταμένη Εκπαιδευτικών Θεμάτων ΔΠΕ Αχαΐας</small><small>Συντονίστρια: Αρβανίτη Ευγενία, Καθηγήτρια, Πρόεδρος ΤΕΕΑΠΗ Πανεπιστημίου Πατρών</small></div></div>
       </div>
     </div>
 
@@ -906,101 +915,125 @@ footer{background:var(--gd);border-top:1px solid rgba(29,158,117,.2);padding:32p
         <div class="prog-p-item"><div class="prog-p-time">09:30–10:00</div><div class="prog-p-text">Προσέλευση – Εγγραφές</div></div>
       </div>
       <div class="prog-parallel">
-        <span class="prog-parallel-time">🕐 10:00–12:00 · Παράλληλες Συνεδρίες</span>
+        <span class="prog-parallel-time">🕐 10:00–11:30 · Α΄ Παράλληλες Συνεδρίες</span>
         <div class="prog-parallel-note">εισηγήσεις 15΄</div>
         <div class="prog-rooms">
         <div class="prog-room">
           <div class="prog-room-name">Αίθουσα Ι-10</div>
-          <div class="prog-talk"><div class="prog-talk-time">10:00–10:15</div><div class="prog-talk-text"><strong>Μαυραγάνης Β.</strong> — Πολυτροπικές διδακτικές πρακτικές στη γλωσσική διδασκαλία: Προκλήσεις και προοπτικές για την παιδαγωγική αξιοποίηση της Τεχνητής Νοημοσύνης στην Πρωτοβάθμια Εκπαίδευση</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">10:15–10:30</div><div class="prog-talk-text"><strong>Αλεξόπουλος Χ. – Δρ Νικολακοπούλου Αικ.</strong> — Η Τεχνητή Νοημοσύνη ως εργαλείο υποστήριξης του διδακτικού σχεδιασμού: Η περίπτωση της συνδιδασκαλίας εκπαιδευτικών Γενικής και Ειδικής Αγωγής στο πλαίσιο της ατομικής αξιολόγησης</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">10:30–10:45</div><div class="prog-talk-text"><strong>Κοκκινάκη Α. – Μπιλάλη Α.</strong> — O Κοινωνικός Αντίκτυπος των AI ChatBots στην Πρωτοβάθμια Εκπαίδευση : Aντιλήψεις των Εκπαιδευτικών και Ηθικές Προκλήσεις</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">10:45–11:00</div><div class="prog-talk-text"><strong>Μουταβέλης Α.</strong> — Από τη συγκλίνουσα σκέψη στην αποκλίνουσα: Η Τεχνητή Νοημοσύνη ως δυναμικό εργαλείο στην ειδική εκπαίδευση</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">11:00–11:15</div><div class="prog-talk-text"><strong>Ντζίφα Α.</strong> — Τεχνητή Νοημοσύνη ως εργαλείο ψηφιακής δικαιοσύνης: Προοπτικές αξιοποίησης εφαρμογών φωνητικής μετάφρασης και μετατροπής κειμένου σε ομιλία για την ενίσχυση της επικοινωνίας σχολείου και οικογενειών Ρομά</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">11:15–11:30</div><div class="prog-talk-text"><strong>Παπαδούρης Π.</strong> — Σχολική ηγεσία και λήψη αποφάσεων μέσω της Αναλυτικής Εκπαιδευτικών Δεδομένων στην εποχή της Τεχνητής Νοημοσύνης</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">11:30–11:45</div><div class="prog-talk-text"><strong>Καραγεώργου Ε.</strong> — Precision Education και PBL στην Πρωτοβάθμια Εκπαίδευση: Μια Πρόταση Ψηφιακής Συμπερίληψης</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">11:45–12:00</div><div class="prog-talk-text"><strong>Γκίνδη Ε.</strong> — Η Τεχνητή Νοημοσύνη και τα Ψηφιακά Εργαλεία στην Πρωτοβάθμια Εκπαίδευση: Μια Συμπεριληπτική Προσέγγιση Μάθησης, Δημιουργίας και Ενδυνάμωσης της Σχολικής Κοινότητας</div></div>
+          <div class="prog-room-theme">Ψηφιακή Πολιτειότητα, Ηθική και Υπεύθυνη Χρήση της Τεχνητής Νοημοσύνης</div>
+          <div class="prog-talk"><div class="prog-talk-time">10:00–10:15</div><div class="prog-talk-text"><strong>Κοκκινάκη Α. – Μπιλάλη Α.</strong> — «O Κοινωνικός Αντίκτυπος των AI ChatBots στην Πρωτοβάθμια Εκπαίδευση: Aντιλήψεις των Εκπαιδευτικών και Ηθικές Προκλήσεις»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">10:15–10:30</div><div class="prog-talk-text"><strong>Μπαρτζάκλη Μ.</strong> — «Ψηφιακή Ευημερία και Σχολική Κοινότητα στην Εποχή της Τεχνητής Νοημοσύνης: Το Erasmus+ TechWell ως Ολιστικό Μοντέλο Ψηφιακής Πολιτειότητας στην Πρωτοβάθμια Εκπαίδευση»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">10:30–10:45</div><div class="prog-talk-text"><strong>Κωνσταντινίδου Σ. – Λαζαρίνης Φ. – Ανδρόπουλος Ι. – Κομπορόζος Γ. – Δαβγιώτης Ι.</strong> — «Καλλιεργώντας την Ψηφιακή Πολιτειότητα μέσα από διαδραστικές οπτικές ιστορίες για τα δικαιώματα του παιδιού στην πρωτοβάθμια εκπαίδευση»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">10:45–11:00</div><div class="prog-talk-text"><strong>Μάγκα Φ.</strong> — «Το Συμβούλιο της Πράσινης Γειτονιάς: Η Παραγωγική Τεχνητή Νοημοσύνη ως εργαλείο διαλόγου για την ανάπτυξη της ψηφιακής πολιτειότητας στην Πρωτοβάθμια Εκπαίδευση»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">11:00–11:15</div><div class="prog-talk-text"><strong>Παντούλα Χ.</strong> — «Κώδικας Δεοντολογίας, Ζητήματα Ασφάλειας και Ηθικές Προκλήσεις στη Χρήση της Τεχνητής Νοημοσύνης στην Εκπαίδευση»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">11:15–11:30</div><div class="prog-talk-text"><strong>Παπαδούρης Π.</strong> — «Σχολική ηγεσία και λήψη αποφάσεων μέσω της Αναλυτικής Εκπαιδευτικών Δεδομένων στην εποχή της Τεχνητής Νοημοσύνης»</div></div>
         </div>
         <div class="prog-room">
           <div class="prog-room-name">Αίθουσα Ι-11</div>
-          <div class="prog-talk"><div class="prog-talk-time">10:00–10:15</div><div class="prog-talk-text"><strong>Φωτοπούλου Β. – Τρυφωνοπούλου Α.</strong> — “Το σεντούκι των ρόλων &amp; ζωγραφίζοντας έναν ήρωα…αλλιώς! Μια έρευνα δράσης στο νηπιαγωγείο για τις έμφυλες αναπαραστάσεις και τα έμφυλα στερεότυπα”</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">10:15–10:30</div><div class="prog-talk-text"><strong>Μητσούλα Ι. – Τσιλιγκιριάν Ερ.- Λαμπροπούλου Γ.- Παναγιωτακόπουλος Χρ.</strong> — Τεχνητή Νοημοσύνη στην Πρωτοβάθμια Εκπαίδευση: Άγχος, Αυτορρύθμιση, Διδακτική Αξιοποίηση και Εργασιακή Εξουθένωση των Εκπαιδευτικών</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">10:30–10:45</div><div class="prog-talk-text"><strong>Βοβός Α.</strong> — «Μίλα!»: Αξιοποίηση Εργαλείων Τεχνητής Νοημοσύνης για τη Δημιουργία Μουσικού Βίντεο στο Πλαίσιο Δράσεων κατά της Ενδοσχολικής Βίας</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">10:45–11:00</div><div class="prog-talk-text"><strong>Μαστρογιάννης Α. – Κατσιώπη Π.</strong> — ΡΟΜ-ΑΙ: Η Τεχνητή Νοημοσύνη ως γέφυρα συμπερίληψης και μαθηματικής κατανόησης για μαθητές Ρομά</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">11:00–11:15</div><div class="prog-talk-text"><strong>Μαρσέλη Ε.</strong> — Τεχνητή Νοημοσύνη στο σχολείο: εργαλείο θετικού μαθησιακού κλίματος και διαφοροποιημένης διδασκαλίας</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">11:15–11:30</div><div class="prog-talk-text"><strong>Κανελλάκη Γκ. – Τσιλιβίτα Κ.</strong> — Η αξιοποίηση των ψηφιακών εργαλείων και της τεχνητής νοημοσύνης στην τάξη του Νηπιαγωγείου μέσα από ενδεικτικά παραδείγματα εφαρμογής</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">11:30–11:45</div><div class="prog-talk-text"><strong>Καραγεώργου Γ. – Πουλιώτη Σ.</strong> — Learning Journals and Process-Based Assessment in the Age of AI: Implications for Primary Education Teachers and Students</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">11:45–12:00</div><div class="prog-talk-text"><strong>Παπαδούρης Π.</strong> — Τεχνητή Νοημοσύνη στη σχολική διοίκηση: θεσμικοί όροι υπέρβασης της ψηφιακής γραφειοκρατίας</div></div>
+          <div class="prog-room-theme">Τεχνητή Νοημοσύνη, Συμπερίληψη και Διαφοροποιημένη Εκπαίδευση</div>
+          <div class="prog-talk"><div class="prog-talk-time">10:00–10:15</div><div class="prog-talk-text"><strong>Αλεξόπουλος Χ. – Νικολακοπούλου Αικ.</strong> — «Η Τεχνητή Νοημοσύνη ως εργαλείο υποστήριξης του διδακτικού σχεδιασμού: Η περίπτωση της συνδιδασκαλίας εκπαιδευτικών Γενικής και Ειδικής Αγωγής στο πλαίσιο της ατομικής αξιολόγησης»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">10:15–10:30</div><div class="prog-talk-text"><strong>Μουταβέλης Α.</strong> — «Από τη συγκλίνουσα σκέψη στην αποκλίνουσα: Η Τεχνητή Νοημοσύνη ως δυναμικό εργαλείο στην ειδική εκπαίδευση»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">10:30–10:45</div><div class="prog-talk-text"><strong>Μαστρογιάννης Α. – Κατσιώπη Π.</strong> — «ΡΟΜ-ΑΙ: Η Τεχνητή Νοημοσύνη ως γέφυρα συμπερίληψης και μαθηματικής κατανόησης για μαθητές Ρομά»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">10:45–11:00</div><div class="prog-talk-text"><strong>Ντζίφα Α.</strong> — «Τεχνητή Νοημοσύνη ως εργαλείο ψηφιακής δικαιοσύνης: Προοπτικές αξιοποίησης εφαρμογών φωνητικής μετάφρασης και μετατροπής κειμένου σε ομιλία για την ενίσχυση της επικοινωνίας σχολείου και οικογενειών Ρομά»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">11:00–11:15</div><div class="prog-talk-text"><strong>Νάκος Κ. – Παπαχαρίτων Α. – Σταμάτη Δ. – Δημητριάδου Β.</strong> — «Τεχνητή Νοημοσύνη και Διαφοροποιημένη Διδασκαλία στο Δημοτικό Σχολείο: Μια Βιβλιογραφική Επισκόπηση»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">11:15–11:30</div><div class="prog-talk-text"><strong>Κούση Μ. – Ρεσβάνη Β.</strong> — «Η αξιοποίηση εργαλείων Τεχνητής Νοημοσύνης στη διαφοροποιημένη διδασκαλία επιθέτων στη Γ΄ Δημοτικού: Μια μελέτη περίπτωσης συνδιδασκαλίας στο 23ο Δημοτικό Πάτρας»</div></div>
         </div>
         </div>
       </div>
       <div class="prog-plenary">
-        <div class="prog-p-item"><div class="prog-p-time">12:00–12:30</div><div class="prog-p-text">Διάλειμμα</div></div>
+        <div class="prog-p-item"><div class="prog-p-time">11:30–11:45</div><div class="prog-p-text">Διάλειμμα</div></div>
       </div>
       <div class="prog-parallel">
-        <span class="prog-parallel-time">🕐 12:30–13:30 · Παράλληλες Συνεδρίες</span>
+        <span class="prog-parallel-time">🕐 11:45–13:15 · Β΄ Παράλληλες Συνεδρίες</span>
         <div class="prog-parallel-note">εισηγήσεις 15΄</div>
         <div class="prog-rooms">
         <div class="prog-room">
           <div class="prog-room-name">Αίθουσα Ι-10</div>
-          <div class="prog-talk"><div class="prog-talk-time">12:30–12:45</div><div class="prog-talk-text"><strong>Μπαρτζάκλη Μ.</strong> — Ψηφιακή Ευημερία και Σχολική Κοινότητα στην Εποχή της Τεχνητής Νοημοσύνης: Το Erasmus+ TechWell ως Ολιστικό Μοντέλο Ψηφιακής Πολιτειότητας στην Πρωτοβάθμια Εκπαίδευση</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">12:45–13:00</div><div class="prog-talk-text"><strong>Κωνσταντινίδου Σ. - Λαζαρίνης Φ. – Ανδρόπουλος Ι. – Κομπορόζος Γ. – Δαβγιώτης Ι.</strong> — Καλλιεργώντας την Ψηφιακή Πολιτειότητα μέσα από διαδραστικές οπτικές ιστορίες για τα δικαιώματα του παιδιού στην πρωτοβάθμια εκπαίδευση</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">13:00–13:15</div><div class="prog-talk-text"><strong>Mάγκα Φ.</strong> — Το Συμβούλιο της Πράσινης Γειτονιάς: Η Παραγωγική Τεχνητή Νοημοσύνη ως εργαλείο διαλόγου για την ανάπτυξη της ψηφιακής πολιτειότητας στην Πρωτοβάθμια Εκπαίδευση</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">13:15–13:30</div><div class="prog-talk-text"><strong>Παντούλα Χ.</strong> — Κώδικας Δεοντολογίας, Ζητήματα Ασφάλειας και Ηθικές Προκλήσεις στη Χρήση της Τεχνητής Νοημοσύνης στην Εκπαίδευση</div></div>
+          <div class="prog-room-theme">Τεχνητή Νοημοσύνη, Εκπαιδευτικοί και Σχολική Οργάνωση</div>
+          <div class="prog-talk"><div class="prog-talk-time">11:45–12:00</div><div class="prog-talk-text"><strong>Μητσούλα Ι. – Τσιλιγκιριάν Ερ. – Λαμπροπούλου Γ. – Παναγιωτακόπουλος Χρ.</strong> — «Τεχνητή Νοημοσύνη στην Πρωτοβάθμια Εκπαίδευση: Άγχος, Αυτορρύθμιση, Διδακτική Αξιοποίηση και Εργασιακή Εξουθένωση των Εκπαιδευτικών»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">12:00–12:15</div><div class="prog-talk-text"><strong>Γκολώνη Β. – Παναγόπουλος Ν. – Μαλαπέτσα Ι.</strong> — «Χαρτογράφηση της Ετοιμότητας, της Επιμόρφωσης και της Χρήσης Εργαλείων Τεχνητής Νοημοσύνης από Εκπαιδευτικούς Πρωτοβάθμιας Εκπαίδευσης: Η περίπτωση της ΔΠΕ Αχαΐας»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">12:15–12:30</div><div class="prog-talk-text"><strong>Μπαρτζάκλη Μ.</strong> — «Από την παραγωγή υλικού στην ποιοτική επαγγελματική μάθηση: Η Τεχνητή Νοημοσύνη ως αφορμή επαναπροσδιορισμού της συνδιδασκαλίας και του ρόλου του/της εκπαιδευτικού»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">12:30–12:45</div><div class="prog-talk-text"><strong>Γκούβα Δ.</strong> — «Εφαρμογή καινοτόμων διδακτικών πρακτικών μέσω ετεροπαρατήρησης και ενδοσχολικής επιμόρφωσης σε δημοτικό σχολείο»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">12:45–13:00</div><div class="prog-talk-text"><strong>Παπαδούρης Π.</strong> — «Τεχνητή Νοημοσύνη στη σχολική διοίκηση: θεσμικοί όροι υπέρβασης της ψηφιακής γραφειοκρατίας»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">13:00–13:15</div><div class="prog-talk-text"><strong>Νικολακοπούλου Αικ. – Γεωργακάκου Ε. – Καμέας Α.</strong> — «Από τις εθνικές στρατηγικές στην εκπαιδευτική πράξη: ανάγκες επιμόρφωσης εκπαιδευτικών Πρωτοβάθμιας &amp; Δευτεροβάθμιας Εκπαίδευσης σε ψηφιακές δεξιότητες και ΤΝ»</div></div>
         </div>
         <div class="prog-room">
           <div class="prog-room-name">Αίθουσα Ι-11</div>
-          <div class="prog-talk"><div class="prog-talk-time">12:30–12:45</div><div class="prog-talk-text"><strong>Γιακή Σ.- Αρβανίτη Ε.</strong> — Από την Αυτόματη Παραγωγή στον Παιδαγωγικό Σχεδιασμό: Η Τεχνητή Νοημοσύνη μέσα από το Μάθηση Μέσω Σχεδιασμού</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">12:45–13:00</div><div class="prog-talk-text"><strong>Ανάγνου Κ.</strong> — Από την καθοδηγούμενη μάθηση στη μαθητική δημιουργία: Ανάπτυξη ήπιων δεξιοτήτων μέσω της Γενετικής Τεχνητής Νοημοσύνης στο μάθημα της Ιστορίας της ΣΤ΄ Δημοτικού· Το παράδειγμα των AI Talking Pictures</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">13:00–13:15</div><div class="prog-talk-text"><strong>Αγγελόπουλος Γ. – Αγγελόπουλος Ν. – Μπακοπούλου Ι.</strong> — Διδακτικός σχεδιασμός στο πλαίσιο του πολλαπλού βιβλίου. Η τεχνητή νοημοσύνη ως γνωσιακός συνεργάτης του εκπαιδευτικού: Η περίπτωση του Google NotebookLM</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">13:15–13:30</div><div class="prog-talk-text"><strong>Λαμπρακάκη Π.</strong> — Μια μελέτη περίπτωσης της αξιοποίησης της τεχνητής νοημοσύνης ως εργαλείου αναστοχασμού στο Σχέδιο Δράσης του Δημοτικού Σχολείου Ροδοδάφνης</div></div>
+          <div class="prog-room-theme">Τεχνητή Νοημοσύνη, Διδακτικός Σχεδιασμός και Μαθησιακές Πρακτικές</div>
+          <div class="prog-talk"><div class="prog-talk-time">11:45–12:00</div><div class="prog-talk-text"><strong>Μαυραγάνης Β.</strong> — «Πολυτροπικές διδακτικές πρακτικές στη γλωσσική διδασκαλία: Προκλήσεις και προοπτικές για την παιδαγωγική αξιοποίηση της Τεχνητής Νοημοσύνης στην Πρωτοβάθμια Εκπαίδευση»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">12:00–12:15</div><div class="prog-talk-text"><strong>Μαρσέλη Ε.</strong> — «Τεχνητή Νοημοσύνη στο σχολείο: εργαλείο θετικού μαθησιακού κλίματος και διαφοροποιημένης διδασκαλίας»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">12:15–12:30</div><div class="prog-talk-text"><strong>Γιακή Σ. – Αρβανίτη Ε.</strong> — «Από την Αυτόματη Παραγωγή στον Παιδαγωγικό Σχεδιασμό: Η Τεχνητή Νοημοσύνη μέσα από το Μάθηση Μέσω Σχεδιασμού»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">12:30–12:45</div><div class="prog-talk-text"><strong>Ανάγνου Κ.</strong> — «Από την καθοδηγούμενη μάθηση στη μαθητική δημιουργία: Ανάπτυξη ήπιων δεξιοτήτων μέσω της Γενετικής Τεχνητής Νοημοσύνης στο μάθημα της Ιστορίας της ΣΤ΄ Δημοτικού· Το παράδειγμα των AI Talking Pictures»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">12:45–13:00</div><div class="prog-talk-text"><strong>Αγγελόπουλος Γ. – Αγγελόπουλος Ν. – Μπακοπούλου Ι.</strong> — «Διδακτικός σχεδιασμός στο πλαίσιο του πολλαπλού βιβλίου. Η τεχνητή νοημοσύνη ως γνωσιακός συνεργάτης του εκπαιδευτικού: Η περίπτωση του Google NotebookLM»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">13:00–13:15</div><div class="prog-talk-text"><strong>Καραγεώργου Ε.</strong> — «Precision Education και PBL στην Πρωτοβάθμια Εκπαίδευση: Μια Πρόταση Ψηφιακής Συμπερίληψης»</div></div>
         </div>
         </div>
+      </div>
+      <div class="prog-plenary">
+        <div class="prog-p-item"><div class="prog-p-time">13:15–13:30</div><div class="prog-p-text">Διάλειμμα</div></div>
       </div>
       <div class="prog-parallel">
         <span class="prog-parallel-time">🕐 13:30–14:15 · Κεντρικές Ομιλίες</span>
         <div class="prog-rooms">
         <div class="prog-room">
           <div class="prog-room-name">Αίθουσα Ι-10</div>
-          <div class="prog-talk"><div class="prog-talk-time">13:30–14:15</div><div class="prog-talk-text"><strong>Στάθης Μπάλιας, Ομότιμος Καθηγητής, Πανεπιστήμιο Πατρών</strong> — «Τεχνητή Νοημοσύνη και Δημοκρατία: η πολιτειότητα μπροστά σε νέες προκλήσεις»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">13:30–14:15</div><div class="prog-talk-text"><strong>Μπάλιας Ευστάθιος, Ομότιμος Καθηγητής, Πανεπιστήμιο Πατρών</strong> — «Τεχνητή Νοημοσύνη και Δημοκρατία: η πολιτειότητα μπροστά σε νέες προκλήσεις»</div></div>
         </div>
         <div class="prog-room">
           <div class="prog-room-name">Αίθουσα Ι-11</div>
-          <div class="prog-talk"><div class="prog-talk-time">13:30–14:15</div><div class="prog-talk-text"><strong>Μαρία Χατζηγιάννη, Αναπληρώτρια Καθηγήτρια, Πανεπιστήμιο Δυτικής Αττικής</strong> — «Η Τεχνητή Νοημοσύνη στο οικοσύστημα της παιδικής ηλικίας: Αναστοχαζόμενοι τη μάθηση, τις σχέσεις και τα δικαιώματα των παιδιών»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">13:30–14:15</div><div class="prog-talk-text"><strong>Χατζηγιάννη Μαρία, Αναπληρώτρια Καθηγήτρια, Πανεπιστήμιο Δυτικής Αττικής</strong> — «Η Τεχνητή Νοημοσύνη στο οικοσύστημα της παιδικής ηλικίας: Αναστοχαζόμενοι τη μάθηση, τις σχέσεις και τα δικαιώματα των παιδιών»</div></div>
+        </div>
+        </div>
+        <div class="prog-parallel-note">Προεδρείο: Δρ. Αρβανίτη Ευγενία, Καθηγήτρια, Πρόεδρος ΤΕΕΑΠΗ Πανεπιστημίου Πατρών · Δρ. Κλάδης Νικόλαος, Διευθυντής Π.Ε. Αχαΐας</div>
+      </div>
+      <div class="prog-plenary">
+        <div class="prog-p-item"><div class="prog-p-time">14:15–14:45</div><div class="prog-p-text">Διάλειμμα<small>Παρουσίαση Ε-poster — Αίθουσα Ι-10</small></div></div>
+      </div>
+      <div class="prog-parallel">
+        <span class="prog-parallel-time">🕐 14:45–16:00 · Γ΄ Παράλληλες Συνεδρίες</span>
+        <div class="prog-parallel-note">εισηγήσεις 15΄</div>
+        <div class="prog-rooms">
+        <div class="prog-room">
+          <div class="prog-room-name">Αίθουσα Ι-10</div>
+          <div class="prog-room-theme">Σχολική Διαμεσολάβηση, Κοινωνικοσυναισθηματική Μάθηση και Τεχνητή Νοημοσύνη</div>
+          <div class="prog-talk"><div class="prog-talk-time">14:45–15:00</div><div class="prog-talk-text"><strong>Φλώρος Β.</strong> — «Σχολική Διαμεσολάβηση και Τεχνητή Νοημοσύνη: Ενδυνάμωση της Σχολικής Κοινότητας μέσω Καινοτόμων Πρακτικών Πρόληψης και Διαχείρισης Συγκρούσεων»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">15:00–15:15</div><div class="prog-talk-text"><strong>Βασιλοπούλου Σ. – Βλάχου Μ.</strong> — «Ο Μυστικός Κώδικας της Διαμεσολάβησης: Μια βιωματική, πολυτροπική και ψηφιακά υποστηριζόμενη προσέγγιση της σχολικής διαμεσολάβησης στο Νηπιαγωγείο»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">15:15–15:30</div><div class="prog-talk-text"><strong>Παντελοπούλου Αικ. – Στεφανόπουλος Στ.</strong> — «Μαθαίνουμε να ακούμε και να συνυπάρχουμε: Πρακτικές σχολικής διαμεσολάβησης στην Α΄ Δημοτικού με την υποστήριξη εργαλείων Τεχνητής Νοημοσύνης»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">15:30–15:45</div><div class="prog-talk-text"><strong>Σκόνδρα Α. – Κυριακοπούλου Κ.</strong> — «Αξιοποίηση εργαλείων Τεχνητής Νοημοσύνης στον σχεδιασμό και την υποστήριξη παρεμβάσεων σχολικής διαμεσολάβησης στο Δημοτικό Σχολείο: Μελέτη περίπτωσης διεπιστημονικής συνεργασίας εκπαιδευτικού και κοινωνικής λειτουργού»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">15:45–16:00</div><div class="prog-talk-text"><strong>Καφετζηδάκη Μ.</strong> — «Η σχολική διαμεσολάβηση ομοτίμων στην πρωτοβάθμια εκπαίδευση: αξιοποιώντας την Τεχνητή Νοημοσύνη στον εκπαιδευτικό σχεδιασμό και το μοντέλο VIA Δυνάμεων Χαρακτήρα (Θετικής Ψυχολογίας) για την ανάπτυξη κοινωνικών δεξιοτήτων»</div></div>
+        </div>
+        <div class="prog-room">
+          <div class="prog-room-name">Αίθουσα Ι-11</div>
+          <div class="prog-room-theme">Δημιουργικότητα, Τέχνες και Καινοτόμες Εκπαιδευτικές Πρακτικές με Τεχνητή Νοημοσύνη</div>
+          <div class="prog-talk"><div class="prog-talk-time">14:45–15:00</div><div class="prog-talk-text"><strong>Καπατσούλια Χ.</strong> — «Καλλιεργώντας δεξιότητες γραμματισμού στην Πληροφορία ως Θεμέλιο Κατανόησης της Τεχνητής Νοημοσύνης στο Νηπιαγωγείο»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">15:00–15:15</div><div class="prog-talk-text"><strong>Βοβός Α.</strong> — «Μίλα!»: Αξιοποίηση Εργαλείων Τεχνητής Νοημοσύνης για τη Δημιουργία Μουσικού Βίντεο στο Πλαίσιο Δράσεων κατά της Ενδοσχολικής Βίας</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">15:15–15:30</div><div class="prog-talk-text"><strong>Παπαγγελοπούλου Β.</strong> — «Πράσινο μέλλον – ζωή καθαρή»: Υβριδικά μοντέλα μουσικής συνδημιουργίας, ηθική της φροντίδας και συμπεριληπτική καινοτομία στην Πρωτοβάθμια Εκπαίδευση»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">15:30–15:45</div><div class="prog-talk-text"><strong>Μαυριγκοπούλου Χ.</strong> — «Από την Παραδοσιακή στην Ψηφιακή Τέχνη: Διερεύνηση της συμβολής της Τεχνητής Νοημοσύνης στη δημιουργικότητα και τη διαπολιτισμική μάθηση μέσα από ένα ευρωπαϊκό έργο eTwinning»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">15:45–16:00</div><div class="prog-talk-text"><strong>Κιτσάκη Ε. – Παπαδοπούλου Π. – Τσολοπούλου Μ.</strong> — «Αξιοποίηση εργαλείων Τεχνητής Νοημοσύνης στη δημιουργία και λειτουργία μαθητικού λαογραφικού μουσείου»</div></div>
         </div>
         </div>
       </div>
       <div class="prog-plenary">
-        <div class="prog-p-item"><div class="prog-p-time">14:15–15:00</div><div class="prog-p-text">Διάλειμμα</div></div>
+        <div class="prog-p-item"><div class="prog-p-time">16:00–16:15</div><div class="prog-p-text">Διάλειμμα</div></div>
       </div>
       <div class="prog-parallel">
-        <span class="prog-parallel-time">🕐 15:00–17:30 · Παράλληλες Συνεδρίες</span>
+        <span class="prog-parallel-time">🕐 16:15–17:30 · Δ΄ Παράλληλες Συνεδρίες</span>
         <div class="prog-parallel-note">εισηγήσεις 15΄ &amp; κλείσιμο Συνεδρίου</div>
         <div class="prog-rooms">
         <div class="prog-room">
           <div class="prog-room-name">Αίθουσα Ι-10</div>
-          <div class="prog-talk"><div class="prog-talk-time">15:00–15:15</div><div class="prog-talk-text"><strong>Κελέση Μ.</strong> — Τεχνητή Νοημοσύνη στην Ψηφιακή Τάξη: Δεοντολογικές Προκλήσεις, Ασφάλεια Δεδομένων και Παιδαγωγικές Πρακτικές στην Πρωτοβάθμια Εκπαίδευση</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">15:15–15:30</div><div class="prog-talk-text"><strong>Κρανή Αικ.</strong> — Μετρώ – Υπολογίζω – Συμπεραίνω: Διεπιστημονική Μοντελοποίηση του Μέσου Όρου με Χρήση Micro:bit στην Πρωτοβάθμια Εκπαίδευση</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">15:30–15:45</div><div class="prog-talk-text"><strong>Βλαχοστεργίου Αι. – Σκουνάκη Β. – Σούλα Ε. – Τζίτζιας Ν. – Γεωργούλα Ε. – Μπέσιος Α. – Βασιλειάδης Γ.</strong> — Τεχνητή Νοημοσύνη, Περιβαλλοντική Εκπαίδευση και Σχολικός Κήπος: Μια Εκπαιδευτική Παρέμβαση σε Δημοτικό Σχολείο</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">15:45–16:00</div><div class="prog-talk-text"><strong>Nάκος Κ. – Παπαχαρίτων Α. – Σταμάτη Δ.- Δημητριάδου Β.</strong> — Τεχνητή Νοημοσύνη και Διαφοροποιημένη Διδασκαλία στο Δημοτικό Σχολείο: Μια Βιβλιογραφική Επισκόπηση</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">16:00–16:15</div><div class="prog-talk-text"><strong>Φλώρος Β.</strong> — Σχολική Διαμεσολάβηση και Τεχνητή Νοημοσύνη: Ενδυνάμωση της Σχολικής Κοινότητας μέσω Καινοτόμων Πρακτικών Πρόληψης και Διαχείρισης Συγκρούσεων</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">16:15–16:30</div><div class="prog-talk-text"><strong>Βασιλοπούλου Σ.- Βλάχου Μ.</strong> — Ο Μυστικός Κώδικας της Διαμεσολάβησης: Μια βιωματική, πολυτροπική και ψηφιακά υποστηριζόμενη προσέγγιση της σχολικής διαμεσολάβησης στο Νηπιαγωγείο</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">16:30–16:45</div><div class="prog-talk-text"><strong>Παντελοπούλου Αικ. – Στεφανόπουλος Στ.</strong> — Μαθαίνουμε να ακούμε και να συνυπάρχουμε»: πρακτικές σχολικής διαμεσολάβησης στην Α΄ Δημοτικού με την υποστήριξη εργαλείων Τεχνητής Νοημοσύνης</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">16:45–17:00</div><div class="prog-talk-text"><strong>Σκόνδρα Α. – Κυριακοπούλου Κ.</strong> — Αξιοποίηση εργαλείων Τεχνητής Νοημοσύνης στον σχεδιασμό και την υποστήριξη παρεμβάσεων σχολικής διαμεσολάβησης στο Δημοτικό Σχολείο: Μελέτη περίπτωσης διεπιστημονικής συνεργασίας εκπαιδευτικού και κοινωνικής λειτουργού</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">17:00–17:15</div><div class="prog-talk-text"><strong>Καφετζηδάκη Μ.</strong> — Η σχολική διαμεσολάβηση ομοτίμων στην πρωτοβάθμια εκπαίδευση: αξιοποιώντας την Τεχνητή Νοημοσύνη στον εκπαιδευτικό σχεδιασμό και το μοντέλο VIA Δυνάμεων Χαρακτήρα (Θετικής Ψυχολογίας) για την ανάπτυξη κοινωνικών δεξιοτήτων</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">17:15–17:30</div><div class="prog-talk-text"><strong>Γεωργίου Μ.</strong> — Φιλαναγνωσία, συναισθηματικός γραμματισμός και τεχνητή νοημοσύνη: σχεδιασμός και εφαρμογή διδακτικού σεναρίου σε μαθητές Ρομά της πρωτοβάθμιας εκπαίδευσης</div></div>
+          <div class="prog-room-theme">Τεχνητή Νοημοσύνη, Διεπιστημονικότητα και Καινοτόμες Εκπαιδευτικές Προσεγγίσεις</div>
+          <div class="prog-talk"><div class="prog-talk-time">16:15–16:30</div><div class="prog-talk-text"><strong>Κατσιμίχα Γ.</strong> — «Αν η Τεχνητή Νοημοσύνη ξέρει τις απαντήσεις, τι πρέπει τελικά να μαθαίνουν τα παιδιά στο σχολείο;»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">16:30–16:45</div><div class="prog-talk-text"><strong>Κρανή Αικ.</strong> — «Μετρώ – Υπολογίζω – Συμπεραίνω: Διεπιστημονική Μοντελοποίηση του Μέσου Όρου με Χρήση Micro:bit στην Πρωτοβάθμια Εκπαίδευση»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">16:45–17:00</div><div class="prog-talk-text"><strong>Λαζαρίνης Φ. – Ανδριόπουλος Ι. – Κομπορόζος Γ. – Δαβγιώτης Ι.</strong> — «Η αξιοποίηση των κόμικς στην επιμόρφωση εκπαιδευτικών για την ανάπτυξη δεξιοτήτων Τεχνητής Νοημοσύνης»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">17:00–17:15</div><div class="prog-talk-text"><strong>Λαμπρακάκη Π.</strong> — «Μια μελέτη περίπτωσης της αξιοποίησης της τεχνητής νοημοσύνης ως εργαλείου αναστοχασμού στο Σχέδιο Δράσης του Δημοτικού Σχολείου Ροδοδάφνης»</div></div>
         </div>
         <div class="prog-room">
           <div class="prog-room-name">Αίθουσα Ι-11</div>
-          <div class="prog-talk"><div class="prog-talk-time">15:00–15:15</div><div class="prog-talk-text"><strong>Κατσιμίχα Γ.</strong> — Αν η Τεχνητή Νοημοσύνη ξέρει τις απαντήσεις, τι πρέπει τελικά να μαθαίνουν τα παιδιά στο σχολείο;</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">15:15–15:30</div><div class="prog-talk-text"><strong>Λαζαρίνης Φ. – Aνδριόπουλος Ι. – Κομπορόζος Γ. – Δαβγιώτης Ι.</strong> — Η αξιοποίηση των κόμικς στην επιμόρφωση εκπαιδευτικών για την ανάπτυξη δεξιοτήτων Τεχνητής Νοημοσύνης</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">15:30–15:45</div><div class="prog-talk-text"><strong>Παπαγγελοπούλου Β.</strong> — Πράσινο μέλλον – ζωή καθαρή»: Υβριδικά μοντέλα μουσικής συνδημιουργίας, ηθική της φροντίδας και συμπεριληπτική καινοτομία στην Πρωτοβάθμια Εκπαίδευση</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">15:45–16:00</div><div class="prog-talk-text"><strong>Γκολώνη Β. – Μαλαπέτσα Ι.- Παναγόπουλος Ν.</strong> — Χαρτογράφηση της Ετοιμότητας, της Επιμόρφωσης και της Χρήσης Εργαλείων Τεχνητής Νοημοσύνης από Εκπαιδευτικούς Πρωτοβάθμιας Εκπαίδευσης: Η περίπτωση της ΔΠΕ Αχαΐας</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">16:00–16:15</div><div class="prog-talk-text"><strong>Μπαρτζάκλη Μ.</strong> — Από την παραγωγή υλικού στην ποιοτική επαγγελματική μάθηση: Η Τεχνητή Νοημοσύνη ως αφορμή επαναπροσδιορισμού της συνδιδασκαλίας και του ρόλου του/της εκπαιδευτικού</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">16:15–16:30</div><div class="prog-talk-text"><strong>Μαυριγκοπούλου Χ.</strong> — Από την Παραδοσιακή στην Ψηφιακή Τέχνη: Διερεύνηση της συμβολής της Τεχνητής Νοημοσύνης στη δημιουργικότητα και τη διαπολιτισμική μάθηση μέσα από ένα ευρωπαϊκό έργο eTwinning</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">16:30–16:45</div><div class="prog-talk-text"><strong>Δρ Νικολακοπούλου Αικ. – Γεωργακάκου Ε. - Δρ Καμέας Α.</strong> — Από τις εθνικές στρατηγικές στην εκπαιδευτική πράξη: ανάγκες επιμόρφωσης εκπαιδευτικών Πρωτοβάθμιας &amp; Δευτεροβάθμιας Εκπαίδευσης σε ψηφιακές δεξιότητες και ΤΝ</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">16:45–17:00</div><div class="prog-talk-text"><strong>Kιτσάκη Ε. – Παπαδοπούλου Π. – Τσολοπούλου Μ.</strong> — Αξιοποίηση εργαλείων Τεχνητής Νοημοσύνης στη δημιουργία και λειτουργία μαθητικού λαογραφικού μουσείου</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">17:00–17:15</div><div class="prog-talk-text"><strong>Γκούβα Δ.</strong> — Εφαρμογή καινοτόμων διδακτικών πρακτικών μέσω ετεροπαρατήρησης και ενδοσχολικής επιμόρφωσης σε δημοτικό σχολείο</div></div>
-          <div class="prog-talk"><div class="prog-talk-time">17:15–17:30</div><div class="prog-talk-text"><strong>Κούση Μ. – Ρεσβάνη Β.</strong> — Η αξιοποίηση εργαλείων Τεχνητής Νοημοσύνης στη διαφοροποιημένη διδασκαλία επιθέτων στη Γ΄Δημοτικού: Μια μελέτη περίπτωσης συνδιδασκαλίας στο 23ο Δημοτικό Πάτρας</div></div>
+          <div class="prog-room-theme">Αναστοχασμός, Αξιολόγηση και Εκπαιδευτική Καινοτομία στην Ψηφιακή Εποχή</div>
+          <div class="prog-talk"><div class="prog-talk-time">16:15–16:30</div><div class="prog-talk-text"><strong>Φωτοπούλου Β. – Τρυφωνοπούλου Α.</strong> — «Το σεντούκι των ρόλων &amp; ζωγραφίζοντας έναν ήρωα…αλλιώς! Μια έρευνα δράσης στο νηπιαγωγείο για τις έμφυλες αναπαραστάσεις και τα έμφυλα στερεότυπα»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">16:30–16:45</div><div class="prog-talk-text"><strong>Γεωργίου Μ.</strong> — «Φιλαναγνωσία, συναισθηματικός γραμματισμός και τεχνητή νοημοσύνη: σχεδιασμός και εφαρμογή διδακτικού σεναρίου σε μαθητές Ρομά της πρωτοβάθμιας εκπαίδευσης»</div></div>
+          <div class="prog-talk"><div class="prog-talk-time">16:45–17:00</div><div class="prog-talk-text"><strong>Γκίνδη Ε.</strong> — «Η Τεχνητή Νοημοσύνη και τα Ψηφιακά Εργαλεία στην Πρωτοβάθμια Εκπαίδευση: Μια Συμπεριληπτική Προσέγγιση Μάθησης, Δημιουργίας και Ενδυνάμωσης της Σχολικής Κοινότητας»</div></div>
         </div>
         </div>
       </div>
